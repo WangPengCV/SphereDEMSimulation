@@ -60,14 +60,14 @@ void create3DGrid(vtkSmartPointer<vtkRenderer> &renderer, int numX, int numY, in
                 }
         }
 }
-void addParticlesToRenderer(const std::vector<std::shared_ptr<SphereParticle>> &particles,
+void addParticlesToRenderer(const std::unordered_map<int,std::unique_ptr<SphereParticle>> &particles,
                             vtkSmartPointer<vtkRenderer> &renderer)
 {
         for (const auto &particle : particles)
         {
                 // Assuming you have a method to get the radius and position of the particle
                 double radius = 0.01;
-                auto position = particle->getPosition();
+                auto position = particle.second->getPosition();
 
                 vtkSmartPointer<vtkSphereSource> sphereSource = vtkSmartPointer<vtkSphereSource>::New();
                 sphereSource->SetPhiResolution(10);   // Increase vertical resolution
@@ -86,7 +86,7 @@ void addParticlesToRenderer(const std::vector<std::shared_ptr<SphereParticle>> &
 }
 
 void visualizeContactPairs(const std::unordered_map<int, std::unordered_set<int>> &contact_pairs,
-                           const std::vector<std::shared_ptr<SphereParticle>> &particles,
+                           const std::unordered_map<int,std::unique_ptr<SphereParticle>> &particles,
                            vtkSmartPointer<vtkRenderer> &renderer)
 {
         vtkSmartPointer<vtkNamedColors> colors = vtkSmartPointer<vtkNamedColors>::New();
@@ -102,8 +102,8 @@ void visualizeContactPairs(const std::unordered_map<int, std::unordered_set<int>
                 for (int id2 : pair.second)
                 {
                         // Get positions of the particles
-                        Eigen::Vector3d pos1 = particles[id1]->getPosition();
-                        Eigen::Vector3d pos2 = particles[id2]->getPosition();
+                        Eigen::Vector3d pos1 = particles.at(id1)->getPosition();
+                        Eigen::Vector3d pos2 = particles.at(id2)->getPosition();
 
                         // Create a line between these points
                         vtkSmartPointer<vtkLineSource> lineSource = vtkSmartPointer<vtkLineSource>::New();
@@ -126,8 +126,8 @@ void visualizeContactPairs(const std::unordered_map<int, std::unordered_set<int>
 }
 
 void visualizeWallContactPairs(const std::unordered_map<int, std::unordered_set<int>> &contact_pairs,
-                               const std::vector<std::shared_ptr<SphereParticle>> &particles,
-                               const std::vector<std::shared_ptr<PlaneWall>> &planewalls,
+                               const std::unordered_map<int,std::unique_ptr<SphereParticle>> &particles,
+                               const std::unordered_map<int,std::unique_ptr<PlaneWall>> &planewalls,
                                vtkSmartPointer<vtkRenderer> &renderer)
 {
         vtkSmartPointer<vtkNamedColors> colors = vtkSmartPointer<vtkNamedColors>::New();
@@ -145,7 +145,7 @@ void visualizeWallContactPairs(const std::unordered_map<int, std::unordered_set<
 
                         // Assuming you have a method to get the radius and position of the particle
                         double radius = 0.01;
-                        auto position = particles[id2]->getPosition();
+                        auto position = particles.at(id2)->getPosition();
 
                         vtkSmartPointer<vtkSphereSource> sphereSource = vtkSmartPointer<vtkSphereSource>::New();
                         sphereSource->SetPhiResolution(10);   // Increase vertical resolution
@@ -166,14 +166,14 @@ void visualizeWallContactPairs(const std::unordered_map<int, std::unordered_set<
                 break;
         }
 }
-void addPlaneWallsToRenderer(const std::vector<std::shared_ptr<PlaneWall>> &planeWalls, vtkSmartPointer<vtkRenderer> &renderer)
+void addPlaneWallsToRenderer(const std::unordered_map<int, std::unique_ptr<PlaneWall>> &planeWalls, vtkSmartPointer<vtkRenderer> &renderer)
 {
         for (const auto &wall : planeWalls)
         {
                 // Assuming you have methods to get the plane's points and orientation
-                auto point1 = wall->getCorner1();
-                auto point2 = wall->getCorner2();
-                auto point3 = wall->getCorner3();
+                auto point1 = wall.second->getCorner1();
+                auto point2 = wall.second->getCorner2();
+                auto point3 = wall.second->getCorner3();
 
                 vtkSmartPointer<vtkPlaneSource> planeSource = vtkSmartPointer<vtkPlaneSource>::New();
                 planeSource->SetOrigin(point2.x(), point2.y(), point2.z());
@@ -217,9 +217,9 @@ int main(int argc, char **argv)
         vtkSmartPointer<vtkRenderer> renderer = vtkSmartPointer<vtkRenderer>::New();
         create3DGrid(renderer, numberOfGridX, numberOfGridY, numberOfGridZ, gridSizeX, gridSizeY, gridSizeZ);
 
-        std::vector<std::shared_ptr<PlaneWall>> planewalls = demproperties.getPlaneWall();
+        auto& planewalls = demproperties.getPlaneWall();
 
-        std::vector<std::shared_ptr<SphereParticle>> sphereparticles = demproperties.getsphereParticles();
+        auto& sphereparticles = demproperties.getsphereParticles();
         std::unordered_map<int, std::unordered_set<int>> pp_contact_paris;
         std::unordered_map<int, std::unordered_set<int>> pw_contact_paris;
 

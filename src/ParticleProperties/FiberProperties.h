@@ -13,21 +13,21 @@ public:
 
     double getNodemomentofinertia() const { return nodemomentofinertia; }
     double getElementlength() const { return elementlength; }
-
-    double getNormalstiffnesses() const { return normalstiffnesses; }
+    double getAspectratio() const { return aspectratio; }
+    double getNormalstiffnesses() const
+    {
+        return normalstiffnesses;
+    }
     double getNormalmodulus() const { return normalmodulus; }
 
     double getShearstiffnesses() const { return shearstiffnesses; }
     double getShearmodulus() const { return shearmodulus; }
 
-
     double getTwiststiffnesses() const { return twiststiffnesses; }
     double getTwistmodulus() const { return twistmodulus; }
 
-
     double getBendingstiffnesses() const { return bendingstiffnesses; }
     double getBendingmodulus() const { return bendingmodulus; }
-
 
     int getNodenumber() const { return nodenumber; }
     double getRadius() const

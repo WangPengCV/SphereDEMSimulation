@@ -2,13 +2,13 @@
 
 // Implementation of RectangularContainer constructor
 RectangularContainer::RectangularContainer(int Id, const PropertyTypeID &Type, int State,
-                                           const Eigen::Vector3d &LowerCorner,
                                            const Eigen::Vector3d &Dimensions,
                                            double Rotation,
                                            const Eigen::Vector3d &Center,
-                                           const Eigen::Vector3d &Velocity)
-    : BoundaryCondition(Id, Type, State), lowerCorner(LowerCorner), dimensions(Dimensions), rotation(Rotation), center(Center),
-      force(Eigen::Vector3d::Zero()), velocity(Velocity), mass(0)
+                                           const Eigen::Vector3d &Velocity,
+                                           const Eigen::Vector3d &Force)
+    : BoundaryCondition(Id, Type, State), dimensions(Dimensions), rotation(Rotation), center(Center),
+      force(Force), velocity(Velocity), mass(0)
 {
     walls.resize(6);
     createWalls();
@@ -43,7 +43,7 @@ void RectangularContainer::rotateContainer(double angleDegrees, const Eigen::Vec
         Eigen::Vector3d normalRotated = rotationMatrix * wall->getNormal();
 
         // Update the wall with new corners (and possibly normal if needed)
-        wall = std::make_shared<PlaneWall>(wall->getId(), wall->getType(), wall->getState(),
+        wall = std::make_unique<PlaneWall>(wall->getId(), wall->getType(), wall->getState(),
                                            normalRotated, // Might need to rotate normal as well
                                            corner1Rotated, corner2Rotated, corner3Rotated,
                                            wall->getVelocity());
@@ -63,7 +63,7 @@ void RectangularContainer::translateToCenter(const Eigen::Vector3d& simulationDo
        
 
         // Update the wall with new corners 
-        wall = std::make_shared<PlaneWall>(wall->getId(), wall->getType(), wall->getState(),
+        wall = std::make_unique<PlaneWall>(wall->getId(), wall->getType(), wall->getState(),
                                            wall->getNormal(), 
                                            corner1Rotated, corner2Rotated, corner3Rotated,
                                            wall->getVelocity());
@@ -85,6 +85,8 @@ void RectangularContainer::createWalls()
 
     // Create each wall with the appropriate corners and normals
     // You'll need to calculate the corners based on the lowerCorner and dimensions
+
+    Eigen::Vector3d lowerCorner = Eigen::Vector3d(center.x() - dimensions.x() / 2.,center.y() - dimensions.y() / 2.,center.z() - dimensions.z() / 2. );
     Eigen::Vector3d corner1 = lowerCorner;
     Eigen::Vector3d corner2 = lowerCorner + Eigen::Vector3d(0, 0, dimensions.z());
     Eigen::Vector3d corner3 = corner2 + Eigen::Vector3d(0, dimensions.y(), 0);
@@ -94,12 +96,12 @@ void RectangularContainer::createWalls()
     Eigen::Vector3d corner7 = corner4 + Eigen::Vector3d(0, dimensions.y(), 0);
     Eigen::Vector3d corner8 = corner1 + Eigen::Vector3d(0, dimensions.y(), 0);
 
-    walls[0] = std::make_shared<PlaneWall>(0, type, state, leftNormal, corner1, corner2, corner3, Eigen::Vector3d::Zero());
-    walls[1] = std::make_shared<PlaneWall>(1, type, state, rightNormal, corner4, corner5, corner6, Eigen::Vector3d::Zero());
-    walls[2] = std::make_shared<PlaneWall>(2, type, state, bottomNormal, corner4, corner5, corner2, Eigen::Vector3d::Zero());
-    walls[3] = std::make_shared<PlaneWall>(3, type, state, frontNormal, corner5, corner2, corner3, Eigen::Vector3d::Zero());
-    walls[4] = std::make_shared<PlaneWall>(4, type, state, backNormal, corner4, corner1, corner8, Eigen::Vector3d::Zero());
-    walls[5] = std::make_shared<PlaneWall>(5, type, state, topNormal, corner7, corner6, corner3, Eigen::Vector3d::Zero());
+    walls[0] = std::make_unique<PlaneWall>(0, type, state, leftNormal, corner1, corner2, corner3, Eigen::Vector3d::Zero());
+    walls[1] = std::make_unique<PlaneWall>(1, type, state, rightNormal, corner4, corner5, corner6, Eigen::Vector3d::Zero());
+    walls[2] = std::make_unique<PlaneWall>(2, type, state, bottomNormal, corner4, corner5, corner2, Eigen::Vector3d::Zero());
+    walls[3] = std::make_unique<PlaneWall>(3, type, state, frontNormal, corner5, corner2, corner3, Eigen::Vector3d::Zero());
+    walls[4] = std::make_unique<PlaneWall>(4, type, state, backNormal, corner4, corner1, corner8, Eigen::Vector3d::Zero());
+    walls[5] = std::make_unique<PlaneWall>(5, type, state, topNormal, corner7, corner6, corner3, Eigen::Vector3d::Zero());
 }
 
 void RectangularContainer::addForce(const Eigen::Vector3d &additionForce)
@@ -120,8 +122,8 @@ void RectangularContainer::resetForce()
 std::string RectangularContainer::save_tostring() const
 {
     std::ostringstream ss;
+    ss.precision(std::numeric_limits<double>::digits10 + 1);
     ss << "RECTANGULARCONTAINER, " << id << ", " << type.getCategory() << ", " << type.getSubType() << ", " << state << ", "
-       << lowerCorner.x() << ", " << lowerCorner.y() << ", " << lowerCorner.z() << ", "
        << dimensions.x() << ", " << dimensions.y() << ", " << dimensions.z() << ", "
        << rotation << ", "
        << center.x() << ", " << center.y() << ", " << center.z() << ", "

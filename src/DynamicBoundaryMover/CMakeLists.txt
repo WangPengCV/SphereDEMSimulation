@@ -2,6 +2,7 @@
 add_library(DynamicBoundaryMover_lib
         DynamicBoundaryMover.cpp
         SpringOscillator.cpp
+        ConstantMove.cpp
 )
 
 # Link with ParticleProperties_lib to use PropertyTypeID

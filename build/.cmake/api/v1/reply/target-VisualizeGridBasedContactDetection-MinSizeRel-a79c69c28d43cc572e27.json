@@ -1,0 +1,3252 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "tests/MinSizeRel/VisualizeGridBasedContactDetection.exe"
+		},
+		{
+			"path" : "tests/MinSizeRel/VisualizeGridBasedContactDetection.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"set_target_properties",
+			"include",
+			"find_package",
+			"target_compile_definitions",
+			"vtk_module_autoinit",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"tests/CMakeLists.txt",
+			"src/CMakeLists.txt",
+			"D:/opensource/vtk/build/lib/cmake/vtk-9.3/VTK-targets.cmake",
+			"D:/opensource/vtk/build/lib/cmake/vtk-9.3/vtk-config.cmake",
+			"D:/opensource/vtk/build/vtk-config.cmake",
+			"CMakeLists.txt",
+			"D:/opensource/vtk/build/lib/cmake/vtk-9.3/vtkModule.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 17,
+				"parent" : 3
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 5,
+				"line" : 10,
+				"parent" : 5
+			},
+			{
+				"file" : 4,
+				"parent" : 6
+			},
+			{
+				"command" : 3,
+				"file" : 4,
+				"line" : 1,
+				"parent" : 7
+			},
+			{
+				"file" : 3,
+				"parent" : 8
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 145,
+				"parent" : 9
+			},
+			{
+				"file" : 2,
+				"parent" : 10
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 3032,
+				"parent" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 2184,
+				"parent" : 11
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 139,
+				"parent" : 11
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 12,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 6,
+				"line" : 3377,
+				"parent" : 15
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 14,
+				"parent" : 5
+			},
+			{
+				"command" : 7,
+				"file" : 5,
+				"line" : 18,
+				"parent" : 5
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG -std:c++17"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "DIY_NO_THREADS"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "FMT_SHARED"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "H5_BUILT_AS_DYNAMIC_LIB"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "KISSFFT_DLL_IMPORT=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "LZ4_DLL_IMPORT=1"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "VTK_HAS_OGGTHEORA_SUPPORT"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "kiss_fft_scalar=double"
+				},
+				{
+					"backtrace" : 16,
+					"define" : "vtkDomainsChemistry_AUTOINIT_INCLUDE=\"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/vtkModuleAutoInit_220c1d97314e76520b30c6e34d0dff76.h\""
+				},
+				{
+					"backtrace" : 16,
+					"define" : "vtkFiltersCore_AUTOINIT_INCLUDE=\"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/vtkModuleAutoInit_220c1d97314e76520b30c6e34d0dff76.h\""
+				},
+				{
+					"backtrace" : 16,
+					"define" : "vtkIOExportGL2PS_AUTOINIT_INCLUDE=\"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/vtkModuleAutoInit_220c1d97314e76520b30c6e34d0dff76.h\""
+				},
+				{
+					"backtrace" : 16,
+					"define" : "vtkIOExport_AUTOINIT_INCLUDE=\"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/vtkModuleAutoInit_220c1d97314e76520b30c6e34d0dff76.h\""
+				},
+				{
+					"backtrace" : 16,
+					"define" : "vtkRenderingContext2D_AUTOINIT_INCLUDE=\"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/vtkModuleAutoInit_220c1d97314e76520b30c6e34d0dff76.h\""
+				},
+				{
+					"backtrace" : 16,
+					"define" : "vtkRenderingCore_AUTOINIT_INCLUDE=\"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/vtkModuleAutoInit_220c1d97314e76520b30c6e34d0dff76.h\""
+				},
+				{
+					"backtrace" : 16,
+					"define" : "vtkRenderingOpenGL2_AUTOINIT_INCLUDE=\"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/vtkModuleAutoInit_220c1d97314e76520b30c6e34d0dff76.h\""
+				},
+				{
+					"backtrace" : 16,
+					"define" : "vtkRenderingVolume_AUTOINIT_INCLUDE=\"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/vtkModuleAutoInit_220c1d97314e76520b30c6e34d0dff76.h\""
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 17,
+					"path" : "D:/opensource/Eigen/Eigen_install/include/eigen3"
+				},
+				{
+					"backtrace" : 18,
+					"path" : "D:/opensource/MPI/install/Include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "F:/PersonWeb/Project/SphereDEMSimulation/src"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "F:/PersonWeb/Project/SphereDEMSimulation/src/ParticleProperties"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "F:/PersonWeb/Project/SphereDEMSimulation/src/Particle"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "F:/PersonWeb/Project/SphereDEMSimulation/src/BoundaryCondition"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "F:/PersonWeb/Project/SphereDEMSimulation/src/Visualization"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "F:/PersonWeb/Project/SphereDEMSimulation/src/ContactDetection"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "F:/PersonWeb/Project/SphereDEMSimulation/src/ContactForce"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "F:/PersonWeb/Project/SphereDEMSimulation/src/DynamicBoundaryMover"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Wrapping/Tools"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Wrapping/Tools"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Views/Context2D"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Views/Context2D"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Common/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Common/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Utilities/KWIML"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Utilities/KWIML"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Utilities/KWSys"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Utilities/KWSys"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/token/vtktoken/token"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/token/vtktoken/token"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/token/vtktoken"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/token/vtktoken"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/token"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/token"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/nlohmannjson/vtknlohmannjson"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/nlohmannjson/vtknlohmannjson"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/nlohmannjson/vtknlohmannjson/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/nlohmannjson"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/nlohmannjson"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Common/DataModel"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Common/DataModel"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Common/Math"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Common/Math"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/kissfft/vtkkissfft"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/kissfft/vtkkissfft"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/kissfft"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/kissfft"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Common/Transforms"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Common/Transforms"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Common/ExecutionModel"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Common/ExecutionModel"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Common/Misc"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Common/Misc"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Views/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Views/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Interaction/Widgets"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Interaction/Widgets"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/General"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/General"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Sources"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Sources"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/Context2D"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/Context2D"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/loguru/vtkloguru"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/loguru/vtkloguru"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/loguru"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/loguru"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Testing/Rendering"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Testing/Rendering"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Testing/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Testing/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Views/Infovis"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Views/Infovis"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Interaction/Style"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Interaction/Style"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Common/Color"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Common/Color"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/Label"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/Label"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/FreeType"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/FreeType"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/freetype/vtkfreetype"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/freetype/vtkfreetype"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/freetype/vtkfreetype/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/freetype"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/freetype"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/zlib/vtkzlib"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/zlib/vtkzlib"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/zlib"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/zlib"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Utilities/octree"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Utilities/octree"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/LOD"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/LOD"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/LICOpenGL2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/LICOpenGL2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/OpenGL2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/OpenGL2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Image"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Image"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Imaging/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Imaging/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/HyperTreeGrid"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/HyperTreeGrid"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/UI"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/UI"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/glew/vtkglew"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/glew/vtkglew"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/glew"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/glew"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/Image"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/Image"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/ContextOpenGL2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/ContextOpenGL2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/CellGrid"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/CellGrid"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/CellGrid"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/CellGrid"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/fmt/vtkfmt"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/fmt/vtkfmt"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/fmt"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/fmt"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/VolumeOpenGL2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/VolumeOpenGL2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Imaging/Math"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Imaging/Math"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/Volume"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/Volume"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/VeraOut"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/VeraOut"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/hdf5/vtkhdf5"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/hdf5/vtkhdf5"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/hdf5"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/hdf5"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/hdf5/vtkhdf5/src"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/hdf5/vtkhdf5/src"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/hdf5/vtkhdf5/hl/src"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/hdf5/vtkhdf5/hl/src"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/TecplotTable"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/TecplotTable"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/utf8"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/utf8"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/SegY"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/SegY"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/ParallelXML"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/ParallelXML"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/XML"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/XML"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/XMLParser"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/XMLParser"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Parallel"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Parallel"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Geometry"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Geometry"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Legacy"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Legacy"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/jsoncpp/vtkjsoncpp"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/jsoncpp/vtkjsoncpp"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/jsoncpp/vtkjsoncpp/json"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/jsoncpp"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/jsoncpp"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/PLY"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/PLY"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/OggTheora"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/OggTheora"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Movie"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Movie"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/theora/vtktheora"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/theora/vtktheora"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/theora/vtktheora/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/theora/vtktheora/include/theora"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/theora"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/theora"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/ogg/vtkogg"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/ogg/vtkogg"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/ogg/vtkogg/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/ogg/vtkogg/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/ogg"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/ogg"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/NetCDF"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/NetCDF"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/netcdf/vtknetcdf"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/netcdf/vtknetcdf"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/netcdf"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/netcdf"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/libproj/vtklibproj/src"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/libproj/vtklibproj/src"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/libproj"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/libproj"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/MotionFX"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/MotionFX"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/pegtl"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/pegtl"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/MINC"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/MINC"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/LSDyna"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/LSDyna"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Import"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Import"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/IOSS"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/IOSS"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Parallel/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Parallel/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/ioss/vtkioss"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/ioss/vtkioss"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/ioss"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/ioss"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/cgns/vtkcgns/src"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/cgns/vtkcgns/src"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/cgns"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/cgns"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/exodusII/vtkexodusII"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/exodusII/vtkexodusII"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/exodusII/vtkexodusII/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/exodusII/vtkexodusII/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/exodusII"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/exodusII"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/FLUENTCFF"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/FLUENTCFF"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Video"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Video"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/FDS"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/FDS"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Infovis"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Infovis"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/libxml2/vtklibxml2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/libxml2/vtklibxml2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/libxml2/vtklibxml2/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/libxml2/vtklibxml2/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/libxml2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/libxml2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/ExportPDF"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/ExportPDF"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Export"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Export"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/VtkJS"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/VtkJS"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/SceneGraph"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/SceneGraph"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/libharu/vtklibharu/src"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/libharu/vtklibharu/src"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/libharu/vtklibharu/src/../include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/libharu/vtklibharu/src/../include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/libharu"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/libharu"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/ExportGL2PS"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/ExportGL2PS"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/GL2PSOpenGL2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/GL2PSOpenGL2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/gl2ps/vtkgl2ps"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/gl2ps/vtkgl2ps"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/gl2ps"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/gl2ps"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/png/vtkpng"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/png/vtkpng"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/png"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/png"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Exodus"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Exodus"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Engys"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Engys"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/EnSight"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/EnSight"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/ERF"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/ERF"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/HDF"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/HDF"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/CityGML"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/CityGML"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/pugixml/vtkpugixml"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/pugixml/vtkpugixml"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/pugixml/vtkpugixml/src"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/pugixml"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/pugixml"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Chemistry"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Chemistry"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Cesium3DTiles"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Cesium3DTiles"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/CellGrid"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/CellGrid"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/CONVERGECFD"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/CONVERGECFD"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/CGNS"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/CGNS"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/Asynchronous"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/Asynchronous"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/AMR"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/AMR"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Interaction/Image"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Interaction/Image"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Infovis/Layout"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Infovis/Layout"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Imaging/Stencil"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Imaging/Stencil"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Imaging/Statistics"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Imaging/Statistics"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Imaging/Morphological"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Imaging/Morphological"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Imaging/General"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Imaging/General"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Imaging/Fourier"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Imaging/Fourier"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/IO/SQL"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/IO/SQL"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/sqlite/vtksqlite"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/sqlite/vtksqlite"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/sqlite"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/sqlite"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Rendering/Annotation"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Rendering/Annotation"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Imaging/Hybrid"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Imaging/Hybrid"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Imaging/Color"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Imaging/Color"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Geovis/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Geovis/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Topology"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Topology"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Tensor"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Tensor"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Temporal"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Temporal"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Hybrid"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Hybrid"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Geometry"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Geometry"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Selection"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Selection"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/SMP"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/SMP"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Reduction"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Reduction"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Programmable"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Programmable"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Points"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Points"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Modeling"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Modeling"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/ParallelImaging"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/ParallelImaging"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Imaging"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Imaging"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Statistics"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Statistics"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Parallel"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Parallel"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Extraction"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Extraction"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/HyperTree"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/HyperTree"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Texture"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Texture"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/GeometryPreview"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/GeometryPreview"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Generic"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Generic"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/FlowPaths"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/FlowPaths"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Common/ComputationalGeometry"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Common/ComputationalGeometry"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/eigen"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/eigen"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/AMR"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/AMR"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Domains/ChemistryOpenGL2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Domains/ChemistryOpenGL2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Domains/Chemistry"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Domains/Chemistry"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Charts/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Charts/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Infovis/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Infovis/Core"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Imaging/Sources"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Imaging/Sources"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Parallel/DIY"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Parallel/DIY"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Common/System"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Common/System"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/diy2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/diy2"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/expat/vtkexpat"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/expat/vtkexpat"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/expat"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/expat"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/doubleconversion/vtkdoubleconversion"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/doubleconversion/vtkdoubleconversion"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/doubleconversion/vtkdoubleconversion/double-conversion"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/doubleconversion"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/doubleconversion"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/lz4/vtklz4"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/lz4/vtklz4"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/lz4"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/lz4"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/lzma/vtklzma"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/lzma/vtklzma"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/lzma"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/lzma"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/fast_float"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/fast_float"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Utilities/DICOMParser"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Utilities/DICOMParser"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/jpeg/vtkjpeg"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/jpeg/vtkjpeg"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/jpeg"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/jpeg"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Utilities/MetaIO/vtkmetaio"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Utilities/MetaIO/vtkmetaio"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Utilities/MetaIO"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Utilities/MetaIO"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/tiff/vtktiff/libtiff"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/tiff/vtktiff/libtiff"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/tiff"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/tiff"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/Filters/Verdict"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/Filters/Verdict"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/verdict/vtkverdict"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/verdict/vtkverdict"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/verdict"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/verdict"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/build/ThirdParty/exprtk"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/opensource/vtk/VTK-master/ThirdParty/exprtk"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2,
+					2
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "Particle_lib::@51f258b71638d180663f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "DynamicBoundaryMover_lib::@04e1fff3912e333a1207"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ParticleProperties_lib::@99c85c404489b7137797"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ContactDetection_lib::@7b2c70fc7da998445a4b"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "DEM_lib::@145eef247bfb46b6828c"
+		}
+	],
+	"id" : "VisualizeGridBasedContactDetection::@a44f0ac069e85531cdee",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "..\\src\\MinSizeRel\\DEM_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "..\\src\\Visualization\\MinSizeRel\\Visualization_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "..\\src\\MinSizeRel\\DEM_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "..\\src\\Visualization\\MinSizeRel\\Visualization_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "..\\src\\ContactDetection\\MinSizeRel\\ContactDetection_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "..\\src\\DynamicBoundaryMover\\MinSizeRel\\DynamicBoundaryMover_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "D:\\opensource\\MPI\\install\\Lib\\x64\\msmpi.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkWrappingTools-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkViewsContext2D-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkTestingRendering-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkTestingCore-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkViewsInfovis-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkViewsCore-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingLabel-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingLOD-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingLICOpenGL2-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingImage-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingContextOpenGL2-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingCellGrid-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingVolumeOpenGL2-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOVeraOut-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOTecplotTable-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOSegY-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOParallelXML-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOParallel-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOPLY-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOOggTheora-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtktheora-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkogg-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIONetCDF-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOMotionFX-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOMINC-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOLSDyna-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOImport-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOIOSS-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkioss-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOFLUENTCFF-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOVideo-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOMovie-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOFDS-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOInfovis-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtklibxml2-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOExportPDF-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOExportGL2PS-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingGL2PSOpenGL2-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkgl2ps-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOExodus-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkexodusII-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtknetcdf-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOEngys-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOEnSight-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOERF-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOCityGML-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOChemistry-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOCesium3DTiles-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOCellGrid-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOCONVERGECFD-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOHDF-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOCGNSReader-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkcgns-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkhdf5_hl-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkhdf5-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOAsynchronous-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOExport-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtklibharu-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingVtkJS-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkjsoncpp-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOGeometry-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingSceneGraph-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOAMR-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkInteractionImage-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkInfovisLayout-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkImagingStencil-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkImagingStatistics-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkImagingMorphological-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkImagingMath-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkImagingFourier-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOSQL-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkInteractionWidgets-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingVolume-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingAnnotation-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkInteractionStyle-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkImagingHybrid-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkImagingColor-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkGeovisCore-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtklibproj-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtksqlite-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersTopology-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersTensor-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersTemporal-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersSelection-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersSMP-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersReduction-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersProgrammable-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersPoints-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersParallelImaging-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersImaging-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkImagingGeneral-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersGeometryPreview-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersGeneric-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersFlowPaths-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersCellGrid-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersAMR-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersParallel-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersTexture-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersModeling-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkDomainsChemistryOpenGL2-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingOpenGL2-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkglew-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "opengl32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingHyperTreeGrid-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingUI-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersHybrid-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkDomainsChemistry-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkChartsCore-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkInfovisCore-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersExtraction-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkParallelDIY-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOXML-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOXMLParser-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkexpat-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkParallelCore-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOLegacy-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOCore-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkdoubleconversion-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtklz4-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtklzma-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersStatistics-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersHyperTree-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkImagingSources-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkIOImage-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkpng-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkDICOMParser-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkmetaio-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtktiff-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkjpeg-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingContext2D-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingFreeType-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkfreetype-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkzlib-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkRenderingCore-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkCommonColor-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersSources-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkImagingCore-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersGeneral-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkfmt-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersVerdict-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkverdict-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersGeometry-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkCommonComputationalGeometry-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkFiltersCore-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkCommonExecutionModel-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkCommonDataModel-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkpugixml-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkCommonSystem-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkCommonMisc-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkCommonTransforms-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkCommonMath-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkkissfft-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkCommonCore-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtkloguru-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtksys-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "ws2_32.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "dbghelp.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 14,
+				"fragment" : "psapi.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\opensource\\vtk\\build\\lib\\MinSizeRel\\vtktoken-9.3.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "..\\src\\Particle\\MinSizeRel\\Particle_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "..\\src\\BoundaryCondition\\MinSizeRel\\BoundaryCondition_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "..\\src\\ContactForce\\MinSizeRel\\ContactForce_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "..\\src\\Particle\\MinSizeRel\\Particle_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "..\\src\\BoundaryCondition\\MinSizeRel\\BoundaryCondition_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "..\\src\\ContactForce\\MinSizeRel\\ContactForce_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "..\\src\\ParticleProperties\\MinSizeRel\\ParticleProperties_lib.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "VisualizeGridBasedContactDetection",
+	"nameOnDisk" : "VisualizeGridBasedContactDetection.exe",
+	"paths" : 
+	{
+		"build" : "tests",
+		"source" : "tests"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "tests/VisualizeGridBasedContactDetection.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

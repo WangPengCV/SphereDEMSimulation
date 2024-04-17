@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="F:\PersonWeb\Project\SphereDEMSimulation\src\ContactDetection\GridBasedContactDetection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\PersonWeb\Project\SphereDEMSimulation\src\ContactDetection\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8ACF0BCD-973D-36A3-9E42-CB33657C1266}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -2,7 +2,9 @@
 add_library(BoundaryCondition_lib
     BoundaryCondition.cpp
     PlaneWall.cpp
-    RectangularContainer.cpp
+    #RectangularContainer.cpp
+    CylinderContainer.cpp
+    ConnectedGeometry.cpp
 )
 
 # Link with ParticleProperties_lib to use PropertyTypeID

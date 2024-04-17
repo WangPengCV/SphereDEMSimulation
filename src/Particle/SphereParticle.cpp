@@ -8,24 +8,34 @@ SphereParticle::SphereParticle(int id, PropertyTypeID type, int state,
     : Particle(id, type, state, manager, position, velocity, omega, force, torque)
 {
 }
-
+SphereParticle::SphereParticle()
+{
+    
+}
 SphereParticle::~SphereParticle()
 {
     // Custom cleanup for SphereParticle, if needed
 }
 
-void SphereParticle::updateVelocity(double deltaTime, Eigen::Vector3d& gravity)
+// void SphereParticle::updateVelocity(double deltaTime, Eigen::Vector3d& gravity)
+// {
+//     // Implement sphere-specific velocity update logic
+//     double mass = manager->getSphereProperties(type)->getMass();
+//     Eigen::Vector3d acceleration = force / mass + gravity;
+//     velocity += acceleration * deltaTime;
+// }
+
+void SphereParticle::updateVelocity(double deltaTime, Eigen::Vector3d& gravity,double mass)
 {
-    // Implement sphere-specific velocity update logic
-    double mass = manager->getSphereProperties(type)->getMass();
     Eigen::Vector3d acceleration = force / mass + gravity;
     velocity += acceleration * deltaTime;
 }
 
-void SphereParticle::updateOmega(double deltaTime)
+
+void SphereParticle::updateOmega(double deltaTime, double moment_of_inertia)
 {
     // Implement sphere-specific angular velocity update logic
-    double moment_of_inertia = manager->getSphereProperties(type)->getMomentOfInertia();
+    //double moment_of_inertia = manager->getSphereProperties(type)->getMomentOfInertia();
     Eigen::Vector3d angular_acceleration = torque / moment_of_inertia;
     omega += angular_acceleration * deltaTime;
 }
@@ -59,7 +69,21 @@ double SphereParticle::computeOverlap(const std::shared_ptr<PlaneWall> &planewal
 
 std::string SphereParticle::save_tostring() const {
     std::ostringstream ss;
+    ss.precision(std::numeric_limits<double>::digits10 + 1);
+
     ss << "PARTICLE, "  << "SPHERE, "<< id << ", " << type.getCategory() << ", " << type.getSubType() << ", " << state << ", "
+       << position.x() << ", " << position.y() << ", " << position.z() << ", "
+       << velocity.x() << ", " << velocity.y() << ", " << velocity.z() << ", "
+       << omega.x() << ", " << omega.y() << ", " << omega.z() ;
+    return ss.str();
+}
+
+std::string SphereParticle::save_fibertostring() const 
+{
+    std::ostringstream ss;
+    ss.precision(std::numeric_limits<double>::digits10 + 1);
+
+    ss << "Fiber, "  << "SPHERE, "<< id << ", " << type.getCategory() << ", " << type.getSubType() << ", " << state << ", "
        << position.x() << ", " << position.y() << ", " << position.z() << ", "
        << velocity.x() << ", " << velocity.y() << ", " << velocity.z() << ", "
        << omega.x() << ", " << omega.y() << ", " << omega.z() ;

@@ -12,7 +12,7 @@ public:
 
    double getequilibriumPosition() const {return equilibriumPosition;}
    void setequilibriumPosition(double equilibriumPosition);
-   
+   std::string save_tostring() const;
 
 private:
     double springConstant;

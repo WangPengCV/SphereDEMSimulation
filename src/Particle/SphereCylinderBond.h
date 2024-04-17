@@ -11,21 +11,28 @@ public:
                        const std::shared_ptr<ParticlePropertyManager> &manager,
                        int fibeid,
                        int node1, int node2, int neighborelement1, int neighborelement2,
+                       double energyDissipation = 0,
                        const Eigen::Vector3d &tangentialforce = Eigen::Vector3d::Zero(),
                        const Eigen::Vector3d &twisttorque = Eigen::Vector3d::Zero(),
                        const Eigen::Vector3d &bendtorque = Eigen::Vector3d::Zero());
-
+    SphereCylinderBond();
     int getNode1() const;
     int getNode2() const;
     int getNeighborelement1() const;
     int getNeighborelement2() const;
     int getId() const;
     int getFiberId() const;
-
+    const Eigen::Vector3d& getTangentialforce() const { return tangentialforce; }
+    const Eigen::Vector3d& getTwisttorque() const { return twisttorque; }
+    const Eigen::Vector3d& getBendtorque() const { return bendtorque; }
+    double getEnergydissipation() const {return energyDissipation;} 
+    double getPotentialenergy(const std::unique_ptr<SphereParticle> &sphere1, const std::unique_ptr<SphereParticle> &sphere2);
+    double getkineticenergy();
     const PropertyTypeID &getType() const;
 
-    void updateBond(std::shared_ptr<SphereParticle> &sphere1, std::shared_ptr<SphereParticle> &sphere2, double timeStep);
+    void updateBond(std::unique_ptr<SphereParticle> &sphere1, std::unique_ptr<SphereParticle> &sphere2, double timeStep);
 
+    std::string save_tostring() const;
 
     std::shared_ptr<ParticlePropertyManager>  getParticlePropertyManager() const { return manager;}
 
@@ -34,7 +41,7 @@ public:
     static void computeOverlap(const Eigen::Vector3d &thisnode1position, const Eigen::Vector3d &thisnode2position, double& s,
                         const Eigen::Vector3d &anothernode1position, const Eigen::Vector3d &anothernode2position, double& t);
     static void computeOverlap(const Eigen::Vector3d &node1position, const Eigen::Vector3d &node2position,
-                        const std::shared_ptr<PlaneWall> &planewall, double &distance);
+                        const std::unique_ptr<PlaneWall> &planewall, double &distance);
 
 private:
     int id;
@@ -50,6 +57,8 @@ private:
     Eigen::Vector3d tangentialforce;
     Eigen::Vector3d twisttorque;
     Eigen::Vector3d bendtorque;
+
+    double energyDissipation;
 
     static double GetClampedRoot(double const &slope, double const &h0, double const &h1);
     // Compute the intersection of the line dR/ds = 0 with the domain

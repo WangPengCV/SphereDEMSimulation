@@ -5,6 +5,7 @@ add_library(ParticleProperties_lib
     PlanewallProperties.cpp
     ParticlePropertyManager.cpp
     FiberProperties.cpp
+    CylinderwallProperties.cpp
 )
 
 # Specify the include directory for the ParticleProperties library

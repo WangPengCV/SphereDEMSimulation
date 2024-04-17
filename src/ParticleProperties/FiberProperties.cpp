@@ -9,9 +9,11 @@ FiberProperties::FiberProperties(double density, double rollingFriction, double 
                                                                                                       bendingmodulus(bendingmodulus), nodenumber(nodenumber), aspectratio(aspectratio), bonddampingcoefficient(bonddampingcoefficient)
 {
     nodemass = (4.0 / 3.0 * PI * radius * radius * radius + elementlength * (nodenumber - 1) * PI * radius * radius) * density / nodenumber;
-    nodemomentofinertia = 2 * PI * radius * radius / 5;
+    nodemomentofinertia = 2 * nodemass * radius * radius / 5.;
+
+
     double sectionarea = PI * radius * radius;
-    double node_area_moment_of_inertia = PI * radius * radius * radius * radius / 4;
+    double node_area_moment_of_inertia = PI * radius * radius * radius * radius / 4.;
     double node_polar_area_moment_of_inertia = node_area_moment_of_inertia * 2;
 
     normalstiffnesses = normalmodulus * sectionarea / elementlength;
@@ -23,6 +25,7 @@ FiberProperties::FiberProperties(double density, double rollingFriction, double 
 std::string FiberProperties::save_tostring() const
 {
     std::ostringstream ss;
+    ss.precision(std::numeric_limits<double>::digits10 + 1);
     ss << density << ", " << radius << ", " << rolling_friction_coefficient << ", "
        << slide_friction_coefficient << ", " << Young_modulus << ", "
        << restitution << ", " << poisson_ratio << ", " << normalmodulus << ", " << shearmodulus << ", "

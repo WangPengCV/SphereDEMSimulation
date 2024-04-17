@@ -13,3 +13,10 @@ void SpringOscillator::setequilibriumPosition(double equilibriumPosition)
 {
     this->equilibriumPosition = equilibriumPosition;
 }
+std::string SpringOscillator::save_tostring() const
+{
+    std::ostringstream ss;
+    ss.precision(std::numeric_limits<double>::digits10 + 1);
+    ss << springConstant << ", " << dampingCoefficient << ", " << equilibriumPosition;
+    return ss.str();
+}

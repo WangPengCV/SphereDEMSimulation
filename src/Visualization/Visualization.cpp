@@ -81,9 +81,9 @@ Visualization::Visualization(const DEMProperties &DEMproperties) : DEMproperties
     {
         // Create a plane source
         vtkSmartPointer<vtkPlaneSource> planesource = vtkSmartPointer<vtkPlaneSource>::New();
-        planesource->SetOrigin(wall->getCorner2().x(), wall->getCorner2().y(), wall->getCorner2().z());
-        planesource->SetPoint1(wall->getCorner1().x(), wall->getCorner1().y(), wall->getCorner1().z());
-        planesource->SetPoint2(wall->getCorner3().x(), wall->getCorner3().y(), wall->getCorner3().z());
+        planesource->SetOrigin(wall.second->getCorner2().x(), wall.second->getCorner2().y(), wall.second->getCorner2().z());
+        planesource->SetPoint1(wall.second->getCorner1().x(), wall.second->getCorner1().y(), wall.second->getCorner1().z());
+        planesource->SetPoint2(wall.second->getCorner3().x(), wall.second->getCorner3().y(), wall.second->getCorner3().z());
 
         // Map the transformed plane to a mapper
         vtkSmartPointer<vtkPolyDataMapper> planemapper = vtkSmartPointer<vtkPolyDataMapper>::New();
@@ -104,35 +104,40 @@ Visualization::Visualization(const DEMProperties &DEMproperties) : DEMproperties
         planeWallSource.push_back(planesource);
         planeWallActor.push_back(planeactor);
     }
-    if (DEMproperties.getRectangularContainer())
+    
+
+    for (const auto &wall : DEMproperties.getCylinderWall())
     {
-        for (const auto &wall : DEMproperties.getRectangularContainer()->getPlaneWall())
-        {
-            // Create a plane source
-            vtkSmartPointer<vtkPlaneSource> planesource = vtkSmartPointer<vtkPlaneSource>::New();
-            planesource->SetOrigin(wall->getCorner2().x(), wall->getCorner2().y(), wall->getCorner2().z());
-            planesource->SetPoint1(wall->getCorner1().x(), wall->getCorner1().y(), wall->getCorner1().z());
-            planesource->SetPoint2(wall->getCorner3().x(), wall->getCorner3().y(), wall->getCorner3().z());
 
-            // Map the transformed plane to a mapper
-            vtkSmartPointer<vtkPolyDataMapper> planemapper = vtkSmartPointer<vtkPolyDataMapper>::New();
-            planemapper->SetInputConnection(planesource->GetOutputPort());
+        double radius = wall.second->getRadius();
 
-            // Create an actor to represent the wall
-            vtkSmartPointer<vtkActor> planeactor = vtkSmartPointer<vtkActor>::New();
-            planeactor->SetMapper(planemapper);
-            // Set properties like color, transparency, etc.
-            planeactor->GetProperty()->SetColor(1.0, 1.0, 1.0); // Red color
-            planeactor->GetProperty()->EdgeVisibilityOn();
-            planeactor->GetProperty()->SetOpacity(0.1);
+        // Calculate cylinder direction vector
+        Eigen::Vector3d startpoint = wall.second->getStartpoint();
+        Eigen::Vector3d endpoint = wall.second->getEndpoint();
 
-            // Add the actor to the renderer
-            renderer->AddActor(planeactor);
+        vtkSmartPointer<LineCylinderSource> cylinderSource = vtkSmartPointer<LineCylinderSource>::New();
+        // 设置圆柱的高度和半径
+        cylinderSource->SetRadius(radius);
+        cylinderSource->SetStartPoint(startpoint.x(), startpoint.y(), startpoint.z());
+        cylinderSource->SetEndPoint(endpoint.x(), endpoint.y(), endpoint.z());
+        cylinderSource->Update();
 
-            // Store the sources and actors for later updates
-            planeWallSource.push_back(planesource);
-            planeWallActor.push_back(planeactor);
-        }
+        // 创建圆柱的 Mapper
+        vtkSmartPointer<vtkPolyDataMapper> cylinderMapper = vtkSmartPointer<vtkPolyDataMapper>::New();
+        cylinderMapper->SetInputConnection(cylinderSource->GetOutputPort());
+
+        // 创建圆柱的 Actor
+        vtkSmartPointer<vtkActor> cylinderActor = vtkSmartPointer<vtkActor>::New();
+        cylinderActor->SetMapper(cylinderMapper);
+        vtkSmartPointer<vtkProperty> cylinderProperty = vtkSmartPointer<vtkProperty>::New();
+        cylinderProperty->SetOpacity(0.5); // 设置不透明度为0.5，即半透明
+        cylinderActor->SetProperty(cylinderProperty);
+        // 将圆柱的 Actor 添加到渲染器
+        renderer->AddActor(cylinderActor);
+
+        // 存储圆柱的 Source 和 Actor
+        cylinderWallSource.push_back(cylinderSource);
+        cylinderWallActor.push_back(cylinderActor);
     }
 
     UpdataFibers();
@@ -157,8 +162,6 @@ Visualization::Visualization(const DEMProperties &DEMproperties) : DEMproperties
     cylinderactor->SetMapper(cylinderglyph3D);
     renderer->AddActor(cylinderactor);
 
-
-
     vtkSmartPointer<vtkGlyph3D> fibersphereglyph3D = vtkSmartPointer<vtkGlyph3D>::New();
     fibersphereglyph3D->SetSourceConnection(sphereSource->GetOutputPort());
     fibersphereglyph3D->SetInputData(fiberspherepolyData);
@@ -177,7 +180,6 @@ Visualization::Visualization(const DEMProperties &DEMproperties) : DEMproperties
     fibersphereactor->SetMapper(fiberspheremapper);
     renderer->AddActor(fibersphereactor);
 
-
     renderer->SetBackground(1, 1, 1);
     renderWindow->SetSize(540, 540);
     renderWindow->SetPosition(0, 0);
@@ -189,6 +191,7 @@ void Visualization::Update()
 {
     UpdateSphere();
     UpdatePlaneWall();
+    UpdateCylinderWall();
     UpdataFibers();
     renderWindowInteractor->GetRenderWindow()->Render();
     if (renderWindowInteractor)
@@ -224,10 +227,10 @@ void Visualization::UpdateSphere()
     colors->SetNumberOfComponents(3); // 3 components for R, G, B
     for (const auto &particle : DEMproperties.getsphereParticles())
     {
-        auto manager = particle->getParticlePropertyManager();
+        auto manager = particle.second->getParticlePropertyManager();
 
-        spherepoints->InsertNextPoint(particle->getPosition().x(), particle->getPosition().y(), particle->getPosition().z());
-        float scale = manager->getSphereProperties(particle->getType())->getRadius();
+        spherepoints->InsertNextPoint(particle.second->getPosition().x(), particle.second->getPosition().y(), particle.second->getPosition().z());
+        float scale = manager->getSphereProperties(particle.second->getType())->getRadius();
         scales->InsertNextValue(scale);
         unsigned char color[3] = {0, 0, 255};
         colors->InsertNextTypedTuple(color);
@@ -274,9 +277,9 @@ void Visualization::UpdataFibers()
     for (const auto &fiberbond : DEMproperties.getfiberbonds())
     {
 
-        const auto &type = fiberbond->getType();
-        const auto &node1 = nodes[fiberbond->getNode1()]->getPosition();
-        const auto &node2 = nodes[fiberbond->getNode2()]->getPosition();
+        const auto &type = fiberbond.second->getType();
+        const auto &node1 = nodes.at(fiberbond.second->getNode1())->getPosition();
+        const auto &node2 = nodes.at(fiberbond.second->getNode2())->getPosition();
         cylinderpoints->InsertNextPoint(0.5 * (node1.x() + node2.x()),
                                         0.5 * (node1.y() + node2.y()),
                                         0.5 * (node1.z() + node2.z()));
@@ -302,7 +305,7 @@ void Visualization::UpdataFibers()
         fiberspherepoints->InsertNextPoint(node1.x(), node1.y(), node1.z());
         spherescales->InsertNextValue(manger->getFiberProperties(type)->getRadius());
         spherecolors->InsertNextTypedTuple(color);
-        if (fiberbond->getNeighborelement2() == -1)
+        if (fiberbond.second->getNeighborelement2() == -1)
         {
             fiberspherepoints->InsertNextPoint(node2.x(), node2.y(), node2.z());
             spherescales->InsertNextValue(manger->getFiberProperties(type)->getRadius());
@@ -318,7 +321,7 @@ void Visualization::UpdataFibers()
     cylinderpolydata->GetPointData()->AddArray(cylinderorientation);
     cylinderpolydata->GetPointData()->AddArray(cylindercolors);
 
-    if(!fiberspherepolyData)
+    if (!fiberspherepolyData)
     {
         fiberspherepolyData = vtkSmartPointer<vtkPolyData>::New();
     }
@@ -329,25 +332,27 @@ void Visualization::UpdataFibers()
 
 void Visualization::UpdatePlaneWall()
 {
-    int plane_index = 0;
     for (const auto &wall : DEMproperties.getPlaneWall())
     {
 
-        planeWallSource[plane_index]->SetOrigin(wall->getCorner2().x(), wall->getCorner2().y(), wall->getCorner2().z());
-        planeWallSource[plane_index]->SetPoint1(wall->getCorner1().x(), wall->getCorner1().y(), wall->getCorner1().z());
-        planeWallSource[plane_index]->SetPoint2(wall->getCorner3().x(), wall->getCorner3().y(), wall->getCorner3().z());
-        plane_index++;
+        planeWallSource[wall.first]->SetOrigin(wall.second->getCorner2().x(), wall.second->getCorner2().y(), wall.second->getCorner2().z());
+        planeWallSource[wall.first]->SetPoint1(wall.second->getCorner1().x(), wall.second->getCorner1().y(), wall.second->getCorner1().z());
+        planeWallSource[wall.first]->SetPoint2(wall.second->getCorner3().x(), wall.second->getCorner3().y(), wall.second->getCorner3().z());
     }
-
-    if (DEMproperties.getRectangularContainer())
+    
+}
+void Visualization::UpdateCylinderWall()
+{
+    for (const auto &wall : DEMproperties.getCylinderWall())
     {
-        for (const auto &wall : DEMproperties.getRectangularContainer()->getPlaneWall())
-        {
 
-            planeWallSource[plane_index]->SetOrigin(wall->getCorner2().x(), wall->getCorner2().y(), wall->getCorner2().z());
-            planeWallSource[plane_index]->SetPoint1(wall->getCorner1().x(), wall->getCorner1().y(), wall->getCorner1().z());
-            planeWallSource[plane_index]->SetPoint2(wall->getCorner3().x(), wall->getCorner3().y(), wall->getCorner3().z());
-            plane_index++;
-        }
+        double radius = wall.second->getRadius();
+
+        // Calculate cylinder direction vector
+        Eigen::Vector3d startpoint = wall.second->getStartpoint();
+        Eigen::Vector3d endpoint = wall.second->getEndpoint();
+
+        cylinderWallSource[wall.first]->SetStartPoint(startpoint.x(), startpoint.y(), startpoint.z());
+        cylinderWallSource[wall.first]->SetEndPoint(endpoint.x(), endpoint.y(), endpoint.z());
     }
 }

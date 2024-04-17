@@ -1,5 +1,15 @@
 #include "ContactForce.h"
 
+ContactForce::ContactForce()
+{
+    energyDissipation = 0;
+}
+
+void ContactForce::setEnergydissipation(double energyDissipation)
+{
+    this->energyDissipation = energyDissipation;
+}
+
 void ContactForce::computerSphereSphereEffective(std::shared_ptr<SphereProperties> &sphereProps1, PropertyTypeID &type1,
                                                  std::shared_ptr<SphereProperties> &sphereProps2, PropertyTypeID &type2)
 {
@@ -71,6 +81,46 @@ void ContactForce::computerSpherePlanewallEffective(std::shared_ptr<PlanewallPro
 
     const double rolling_friction2 = sphereProps2->getRollingFriction();
     const double rolling_friction1 = planeWallProps1->getRollingFriction();
+
+    effectiveyoungsmodulus[type1][type2] = (youngs_modulus1 * youngs_modulus2) /
+                                           ((youngs_modulus2 * (1 - poisson_ratio1 * poisson_ratio1)) +
+                                            (youngs_modulus1 * (1 - poisson_ratio2 * poisson_ratio2)));
+
+    effectiveshearmodulus[type1][type2] = (youngs_modulus1 * youngs_modulus2) /
+                                          (2 * ((youngs_modulus2 * (2 - poisson_ratio1) *
+                                                 (1 + poisson_ratio1)) +
+                                                (youngs_modulus1 * (2 - poisson_ratio2) *
+                                                 (1 + poisson_ratio2))));
+
+    modelparameterbeta[type1][type2] = 2 * (contact_damping_coefficient1 * contact_damping_coefficient2) /
+                                       (contact_damping_coefficient1 + contact_damping_coefficient2 + DBL_MIN);
+
+    effectiveslidingfriction[type1][type2] = 2 * sliding_friction1 * sliding_friction2 /
+                                             (sliding_friction1 + sliding_friction2 + DBL_MIN);
+
+    effectiverollingfriction[type1][type2] = 2 * rolling_friction1 * rolling_friction2 /
+                                             (rolling_friction1 + rolling_friction2 + DBL_MIN);
+}
+void ContactForce::computerSphereCylinderwallEffective(std::shared_ptr<CylinderwallProperties> &cylinderwallProps1, PropertyTypeID &type1,
+                                                       std::shared_ptr<SphereProperties> &sphereProps2, PropertyTypeID &type2)
+{
+    const double youngs_modulus2 = sphereProps2->getYoungModulus();
+    const double youngs_modulus1 = cylinderwallProps1->getYoungModulus();
+
+    const double poisson_ratio2 = sphereProps2->getPoissonRatio();
+    const double poisson_ratio1 = cylinderwallProps1->getPoissonRatio();
+
+    const double restitution2 = sphereProps2->getRestitution();
+    const double restitution1 = cylinderwallProps1->getRestitution();
+
+    const double contact_damping_coefficient2 = -log(restitution2) / sqrt(PI * PI + log(restitution2) * log(restitution2));
+    const double contact_damping_coefficient1 = -log(restitution1) / sqrt(PI * PI + log(restitution1) * log(restitution1));
+
+    const double sliding_friction2 = sphereProps2->getSlidingFriction();
+    const double sliding_friction1 = cylinderwallProps1->getSlidingFriction();
+
+    const double rolling_friction2 = sphereProps2->getRollingFriction();
+    const double rolling_friction1 = cylinderwallProps1->getRollingFriction();
 
     effectiveyoungsmodulus[type1][type2] = (youngs_modulus1 * youngs_modulus2) /
                                            ((youngs_modulus2 * (1 - poisson_ratio1 * poisson_ratio1)) +
@@ -233,6 +283,47 @@ void ContactForce::computerFiberPlanewallEffective(std::shared_ptr<PlanewallProp
                                              (rolling_friction1 + rolling_friction2 + DBL_MIN);
 }
 
+void ContactForce::computerFiberCylinderwallEffective(std::shared_ptr<CylinderwallProperties> &cylinderwallproperties1, PropertyTypeID &type1,
+                                                      std::shared_ptr<FiberProperties> &fiberproperties2, PropertyTypeID &type2)
+{
+    const double youngs_modulus2 = fiberproperties2->getYoungModulus();
+    const double youngs_modulus1 = cylinderwallproperties1->getYoungModulus();
+
+    const double poisson_ratio2 = fiberproperties2->getPoissonRatio();
+    const double poisson_ratio1 = cylinderwallproperties1->getPoissonRatio();
+
+    const double restitution2 = fiberproperties2->getRestitution();
+    const double restitution1 = cylinderwallproperties1->getRestitution();
+
+    const double contact_damping_coefficient2 = -log(restitution2) / sqrt(PI * PI + log(restitution2) * log(restitution2));
+    const double contact_damping_coefficient1 = -log(restitution1) / sqrt(PI * PI + log(restitution1) * log(restitution1));
+
+    const double sliding_friction2 = fiberproperties2->getSlidingFriction();
+    const double sliding_friction1 = cylinderwallproperties1->getSlidingFriction();
+
+    const double rolling_friction2 = fiberproperties2->getRollingFriction();
+    const double rolling_friction1 = cylinderwallproperties1->getRollingFriction();
+
+    effectiveyoungsmodulus[type1][type2] = (youngs_modulus1 * youngs_modulus2) /
+                                           ((youngs_modulus2 * (1 - poisson_ratio1 * poisson_ratio1)) +
+                                            (youngs_modulus1 * (1 - poisson_ratio2 * poisson_ratio2)));
+
+    effectiveshearmodulus[type1][type2] = (youngs_modulus1 * youngs_modulus2) /
+                                          (2 * ((youngs_modulus2 * (2 - poisson_ratio1) *
+                                                 (1 + poisson_ratio1)) +
+                                                (youngs_modulus1 * (2 - poisson_ratio2) *
+                                                 (1 + poisson_ratio2))));
+
+    modelparameterbeta[type1][type2] = 2 * (contact_damping_coefficient1 * contact_damping_coefficient2) /
+                                       (contact_damping_coefficient1 + contact_damping_coefficient2 + DBL_MIN);
+
+    effectiveslidingfriction[type1][type2] = 2 * sliding_friction1 * sliding_friction2 /
+                                             (sliding_friction1 + sliding_friction2 + DBL_MIN);
+
+    effectiverollingfriction[type1][type2] = 2 * rolling_friction1 * rolling_friction2 /
+                                             (rolling_friction1 + rolling_friction2 + DBL_MIN);
+}
+
 void ContactForce::addParticleProperties(const std::shared_ptr<ParticlePropertyManager> &manager)
 {
 
@@ -257,6 +348,10 @@ void ContactForce::addParticleProperties(const std::shared_ptr<ParticlePropertyM
                 {
                     computerSpherePlanewallEffective(planeWallProps2, type2, sphereProps1, type1);
                 }
+                else if (auto &cylinderWallProps2 = std::dynamic_pointer_cast<CylinderwallProperties>(property2.second))
+                {
+                    computerSphereCylinderwallEffective(cylinderWallProps2, type2, sphereProps1, type1);
+                }
             }
             else if (auto &fiberProps1 = std::dynamic_pointer_cast<FiberProperties>(property1.second))
             {
@@ -272,12 +367,16 @@ void ContactForce::addParticleProperties(const std::shared_ptr<ParticlePropertyM
                 {
                     computerFiberPlanewallEffective(planeWallProps2, type2, fiberProps1, type1);
                 }
+                else if (auto &cylinderWallProps2 = std::dynamic_pointer_cast<CylinderwallProperties>(property2.second))
+                {
+                    computerFiberCylinderwallEffective(cylinderWallProps2, type2, fiberProps1, type1);
+                }
             }
         }
     }
 }
 
-void ContactForce::computeSphereSphereForce(const std::shared_ptr<SphereParticle> &sphere1, const std::shared_ptr<SphereParticle> &sphere2, double timeStep)
+void ContactForce::computeSphereSphereForce(const std::unique_ptr<SphereParticle> &sphere1, const std::unique_ptr<SphereParticle> &sphere2, double timeStep)
 {
 
     auto &manager = sphere1->getParticlePropertyManager();
@@ -353,13 +452,12 @@ void ContactForce::computeSphereSphereForce(const std::shared_ptr<SphereParticle
         double tangential_contact_stiffness = 8 * effectiveshearmodulus[particletype_one][particletype_two] * radius_times_overlap_sqrt;
 
         double tangential_damping_constant = 1.8257 * modelparameterbeta[particletype_one][particletype_two] * sqrt(tangential_contact_stiffness * effectivemass[particletype_one][particletype_two]);
-
+        Eigen::Vector3d normal_damping_force = (normal_damping_constant * normal_relative_velocity_value) * normal_unit_vector;
         // Calculation of normal force using spring and dashpot normal forces
         Eigen::Vector3d normal_force =
-            ((normal_contact_stiffness * normal_overlap) * normal_unit_vector) +
-            ((normal_damping_constant * normal_relative_velocity_value) *
-             normal_unit_vector);
+            ((normal_contact_stiffness * normal_overlap) * normal_unit_vector) + normal_damping_force;
 
+        energyDissipation += std::fabs(normal_damping_force.dot(normal_relative_velocity * timeStep));
         // Calculation of tangential force using spring and dashpot tangential
         // forces. Since we need dashpot tangential force in the gross sliding again,
         // we define it as a separate variable
@@ -380,6 +478,7 @@ void ContactForce::computeSphereSphereForce(const std::shared_ptr<SphereParticle
             contact_info.tangentialDisplacement = tangential_overlap;
             tangential_force = (tangential_contact_stiffness * tangential_overlap) + dashpot_tangential_force;
         }
+        energyDissipation += std::fabs(tangential_force.dot(tangential_relative_velocity * timeStep));
 
         // Calculation of torque
         // Torque caused by tangential force (tangential_torque)
@@ -399,8 +498,8 @@ void ContactForce::computeSphereSphereForce(const std::shared_ptr<SphereParticle
     }
 }
 
-void ContactForce::computeSphereFiberForce(const std::shared_ptr<SphereParticle> &sphere, const std::shared_ptr<SphereCylinderBond> &fiberbond,
-                                           const std::shared_ptr<SphereParticle> &node1, const std::shared_ptr<SphereParticle> &node2, double timeStep)
+void ContactForce::computeSphereFiberForce(const std::unique_ptr<SphereParticle> &sphere, const std::unique_ptr<SphereCylinderBond> &fiberbond,
+                                           const std::unique_ptr<SphereParticle> &node1, const std::unique_ptr<SphereParticle> &node2, double timeStep)
 {
     auto &manager = fiberbond->getParticlePropertyManager();
 
@@ -416,12 +515,12 @@ void ContactForce::computeSphereFiberForce(const std::shared_ptr<SphereParticle>
 
     double t;
     Eigen::Vector3d projection;
-    SphereCylinderBond::computeOverlap(node1Pos,node2Pos,spherePos,t,projection);
+    SphereCylinderBond::computeOverlap(node1Pos, node2Pos, spherePos, t, projection);
     Eigen::Vector3d normal_unit_vector = projection - spherePos;
     double distance = normal_unit_vector.norm();
     double normal_overlap = (sphereRadius + fiberRadius) - distance;
 
-    if(normal_overlap > 0)
+    if (normal_overlap > 0)
     {
         normal_unit_vector.normalize();
 
@@ -477,11 +576,12 @@ void ContactForce::computeSphereFiberForce(const std::shared_ptr<SphereParticle>
 
         double tangential_damping_constant = 1.8257 * modelparameterbeta[spheretype][fibertype] * sqrt(tangential_contact_stiffness * effectivemass[spheretype][fibertype]);
 
+        Eigen::Vector3d normal_damping_force = (normal_damping_constant * normal_relative_velocity_value) * normal_unit_vector;
         // Calculation of normal force using spring and dashpot normal forces
         Eigen::Vector3d normal_force =
-            ((normal_contact_stiffness * normal_overlap) * normal_unit_vector) +
-            ((normal_damping_constant * normal_relative_velocity_value) *
-             normal_unit_vector);
+            ((normal_contact_stiffness * normal_overlap) * normal_unit_vector) + normal_damping_force;
+
+        energyDissipation += std::fabs(normal_damping_force.dot(normal_relative_velocity * timeStep));
 
         // Calculation of tangential force using spring and dashpot tangential
         // forces. Since we need dashpot tangential force in the gross sliding again,
@@ -503,6 +603,7 @@ void ContactForce::computeSphereFiberForce(const std::shared_ptr<SphereParticle>
             contact_info.tangentialDisplacement = tangential_overlap;
             tangential_force = (tangential_contact_stiffness * tangential_overlap) + dashpot_tangential_force;
         }
+        energyDissipation += std::fabs(tangential_force.dot(tangential_relative_velocity * timeStep));
 
         // Calculation of torque
         // Torque caused by tangential force (tangential_torque)
@@ -512,22 +613,19 @@ void ContactForce::computeSphereFiberForce(const std::shared_ptr<SphereParticle>
         Eigen::Vector3d results_force = normal_force + tangential_force;
 
         sphere->addForce(-results_force);
-        node1->addForce((1-t)*results_force);
-        node2->addForce(t*results_force);
+        node1->addForce((1 - t) * results_force);
+        node2->addForce(t * results_force);
 
         sphere->addTorque(-tangential_torque1);
-        node1->addTorque((t-1)*tangential_torque2);
-        node2->addTorque(-t*tangential_torque2);
+        node1->addTorque((t - 1) * tangential_torque2);
+        node2->addTorque(-t * tangential_torque2);
         contact_info.normalForce = -normal_force;
         contact_info.tangentialForce = -tangential_force;
         nextspherefibercontactinformationlist[id1][id2] = contact_info;
-        
     }
-    
-
 }
 
-void ContactForce::computePlaneWallSphereForce(const std::shared_ptr<PlaneWall> &planewall, const std::shared_ptr<SphereParticle> &sphere, double timeStep)
+void ContactForce::computePlaneWallSphereForce(const std::unique_ptr<PlaneWall> &planewall, const std::unique_ptr<SphereParticle> &sphere, double timeStep)
 {
     // Retrieve the sphere's center and radius
     Eigen::Vector3d sphereCenter = sphere->getPosition();
@@ -577,7 +675,7 @@ void ContactForce::computePlaneWallSphereForce(const std::shared_ptr<PlaneWall> 
         int wallId = planewall->getId();
         int sphereId = sphere->getId();
 
-        auto &innerMap = wallspherecontactinformationlist[wallId]; // Access or create the inner map
+        auto &innerMap = planewallspherecontactinformationlist[wallId]; // Access or create the inner map
         auto innerIt = innerMap.find(sphereId);
 
         if (innerIt == innerMap.end())
@@ -587,7 +685,7 @@ void ContactForce::computePlaneWallSphereForce(const std::shared_ptr<PlaneWall> 
             innerMap[sphereId] = newContactInfo; // Insert the new contact information
         }
 
-        ContactInformation &contact_info = wallspherecontactinformationlist[wallId][sphereId];
+        ContactInformation &contact_info = planewallspherecontactinformationlist[wallId][sphereId];
 
         Eigen::Vector3d modified_tangential_displacement = contact_info.tangentialDisplacement + contact_info.previousTangentialVelocity * timeStep;
         // Updating the contact_info container based on the new calculated values
@@ -608,11 +706,12 @@ void ContactForce::computePlaneWallSphereForce(const std::shared_ptr<PlaneWall> 
 
         double tangential_damping_constant = 1.8257 * modelparameterbeta[walltype][spheretype] * sqrt(tangential_contact_stiffness * manager->getSphereProperties(spheretype)->getMass());
 
+        Eigen::Vector3d normal_damping_force = (normal_damping_constant * normal_relative_velocity_value) * normal_unit_vector;
         // Calculation of normal force using spring and dashpot normal forces
         Eigen::Vector3d normal_force =
-            ((normal_contact_stiffness * normal_overlap) * normal_unit_vector) +
-            ((normal_damping_constant * normal_relative_velocity_value) *
-             normal_unit_vector);
+            ((normal_contact_stiffness * normal_overlap) * normal_unit_vector) + normal_damping_force;
+
+        energyDissipation += std::fabs(normal_damping_force.dot(normal_relative_velocity * timeStep));
 
         // Calculation of tangential force using spring and dashpot tangential
         // forces. Since we need dashpot tangential force in the gross sliding again,
@@ -634,6 +733,7 @@ void ContactForce::computePlaneWallSphereForce(const std::shared_ptr<PlaneWall> 
             contact_info.tangentialDisplacement = tangential_overlap;
             tangential_force = (tangential_contact_stiffness * tangential_overlap) + dashpot_tangential_force;
         }
+        energyDissipation += std::fabs(tangential_force.dot(tangential_relative_velocity * timeStep));
 
         // Calculation of torque
         // Torque caused by tangential force (tangential_torque)
@@ -647,12 +747,148 @@ void ContactForce::computePlaneWallSphereForce(const std::shared_ptr<PlaneWall> 
 
         contact_info.normalForce = normal_force;
         contact_info.tangentialForce = tangential_force;
-        nextwallspherecontactinformationlist[wallId][sphereId] = contact_info;
+        nextplanewallspherecontactinformationlist[wallId][sphereId] = contact_info;
     }
 }
 
-void ContactForce::computeFiberFiberForce(const std::shared_ptr<SphereCylinderBond> &fiberbond1, const std::shared_ptr<SphereParticle> &bondonenode1, const std::shared_ptr<SphereParticle> &bondonenode2,
-                                          const std::shared_ptr<SphereCylinderBond> &fiberbond2, const std::shared_ptr<SphereParticle> &bondtwonode1, const std::shared_ptr<SphereParticle> &bondtwonode2,
+void ContactForce::computeCylinderWallSphereForce(const std::unique_ptr<CylinderContainer> &cylinderWall, const std::unique_ptr<SphereParticle> &sphere, double timeStep)
+{
+    // Retrieve the sphere's center and radius
+    Eigen::Vector3d sphereCenter = sphere->getPosition();
+
+    auto &manager = sphere->getParticlePropertyManager();
+
+    PropertyTypeID spheretype = sphere->getType();
+    PropertyTypeID walltype = cylinderWall->getType();
+
+    double sphereRadius = manager->getSphereProperties(spheretype)->getRadius();
+    double cylinderRadius = cylinderWall->getRadius();
+    // Retrieve the cylinder wall's point
+    Eigen::Vector3d cylinderEnd = cylinderWall->getEndpoint();
+
+    Eigen::Vector3d cylinderStart = cylinderWall->getStartpoint();
+
+    // Calculate the axis direction of the cylinder
+    Eigen::Vector3d cylinderAxis = (cylinderEnd - cylinderStart).normalized();
+
+    // Calculate the vector from the start point of the cylinder to the sphere center
+    Eigen::Vector3d startToCenter = sphereCenter - cylinderStart;
+
+    // Project the vector onto the cylinder axis to find the closest point on the axis to the sphere center
+    double projection = startToCenter.dot(cylinderAxis);
+    projection = std::clamp(projection, 0.0, 1.0);
+    Eigen::Vector3d closestPoint = cylinderStart + projection * cylinderAxis;
+    Eigen::Vector3d normal_unit_vector = sphereCenter - closestPoint;
+
+    // Calculate the distance from the sphere center to the closest point on the axis
+    double distanceToAxis = normal_unit_vector.norm();
+    double normal_overlap = 0;
+    if (distanceToAxis > cylinderRadius)
+    {
+        normal_unit_vector = -normal_unit_vector / distanceToAxis;
+        normal_overlap = sphereRadius + cylinderRadius - distanceToAxis;
+    }
+    else
+    {
+        normal_unit_vector = normal_unit_vector / distanceToAxis;
+        normal_overlap = distanceToAxis - (cylinderRadius - sphereRadius);
+    }
+    if (normal_overlap > 0)
+    {
+        // Defining velocities and angular velocities of sphere
+        Eigen::Vector3d sphere_velocity = sphere->getVelocity();
+
+        Eigen::Vector3d sphere_omega = sphere->getOmega();
+        // Calculation of contact relative velocity
+        Eigen::Vector3d contact_relative_velocity = sphere_velocity + (sphereRadius * sphere_omega).cross(normal_unit_vector);
+
+        double normal_relative_velocity_value = contact_relative_velocity.dot(normal_unit_vector);
+        // Calculation of normal relative velocity
+        Eigen::Vector3d normal_relative_velocity = normal_relative_velocity_value * normal_unit_vector;
+        // Calculation of tangential relative velocity
+        Eigen::Vector3d tangential_relative_velocity = contact_relative_velocity - normal_relative_velocity;
+        // modify tangential_overlap
+        int wallId = cylinderWall->getId();
+        int sphereId = sphere->getId();
+
+        auto &innerMap = cylinderwallspherecontactinformationlist[wallId]; // Access or create the inner map
+        auto innerIt = innerMap.find(sphereId);
+
+        if (innerIt == innerMap.end())
+        {
+            // Contact information for this pair does not exist, create a new one
+            ContactInformation newContactInfo(wallId, sphereId);
+            innerMap[sphereId] = newContactInfo; // Insert the new contact information
+        }
+
+        ContactInformation &contact_info = cylinderwallspherecontactinformationlist[wallId][sphereId];
+
+        Eigen::Vector3d modified_tangential_displacement = contact_info.tangentialDisplacement + contact_info.previousTangentialVelocity * timeStep;
+        // Updating the contact_info container based on the new calculated values
+
+        contact_info.tangentialDisplacement = modified_tangential_displacement;
+        contact_info.previousTangentialVelocity = tangential_relative_velocity;
+
+        double radius_times_overlap_sqrt = sqrt(manager->getSphereProperties(spheretype)->getRadius() * normal_overlap);
+
+        double sn = 2 * effectiveyoungsmodulus[walltype][spheretype] * radius_times_overlap_sqrt;
+
+        double normal_contact_stiffness = 0.666666 * sn;
+
+        double normal_damping_constant = 1.8257 * modelparameterbeta[walltype][spheretype] * sqrt(sn * manager->getSphereProperties(spheretype)->getMass());
+
+        // tangential stiffness
+        double tangential_contact_stiffness = 8 * effectiveshearmodulus[walltype][spheretype] * radius_times_overlap_sqrt;
+
+        double tangential_damping_constant = 1.8257 * modelparameterbeta[walltype][spheretype] * sqrt(tangential_contact_stiffness * manager->getSphereProperties(spheretype)->getMass());
+
+        Eigen::Vector3d normal_damping_force = (normal_damping_constant * normal_relative_velocity_value) * normal_unit_vector;
+        // Calculation of normal force using spring and dashpot normal forces
+        Eigen::Vector3d normal_force =
+            ((normal_contact_stiffness * normal_overlap) * normal_unit_vector) + normal_damping_force;
+
+        energyDissipation += std::fabs(normal_damping_force.dot(normal_relative_velocity * timeStep));
+
+        // Calculation of tangential force using spring and dashpot tangential
+        // forces. Since we need dashpot tangential force in the gross sliding again,
+        // we define it as a separate variable
+        Eigen::Vector3d dashpot_tangential_force = tangential_damping_constant * tangential_relative_velocity;
+        Eigen::Vector3d tangential_force = (tangential_contact_stiffness * modified_tangential_displacement) + dashpot_tangential_force;
+
+        double coulomb_threshold = effectiveslidingfriction[walltype][spheretype] * normal_force.norm();
+
+        double tangential_force_value = tangential_force.norm();
+        // Check for gross sliding
+        if (tangential_force_value > coulomb_threshold)
+        {
+            // Gross sliding occurs and the tangential overlap and tangnetial
+            // force are limited to Coulumb's criterion
+            Eigen::Vector3d tangential_overlap = (coulomb_threshold * (tangential_force / (tangential_force_value + DBL_MIN)) - dashpot_tangential_force) /
+                                                 (tangential_contact_stiffness + DBL_MIN);
+
+            contact_info.tangentialDisplacement = tangential_overlap;
+            tangential_force = (tangential_contact_stiffness * tangential_overlap) + dashpot_tangential_force;
+        }
+        energyDissipation += std::fabs(tangential_force.dot(tangential_relative_velocity * timeStep));
+
+        // Calculation of torque
+        // Torque caused by tangential force (tangential_torque)
+        Eigen::Vector3d tangential_torque1 = (sphereRadius * normal_unit_vector).cross(tangential_force);
+
+        Eigen::Vector3d results_force = normal_force + tangential_force;
+
+        sphere->addForce(-results_force);
+        sphere->addTorque(-tangential_torque1);
+        cylinderWall->addForce(results_force);
+
+        contact_info.normalForce = normal_force;
+        contact_info.tangentialForce = tangential_force;
+        nextcylinderwallspherecontactinformationlist[wallId][sphereId] = contact_info;
+    }
+}
+
+void ContactForce::computeFiberFiberForce(const std::unique_ptr<SphereCylinderBond> &fiberbond1, const std::unique_ptr<SphereParticle> &bondonenode1, const std::unique_ptr<SphereParticle> &bondonenode2,
+                                          const std::unique_ptr<SphereCylinderBond> &fiberbond2, const std::unique_ptr<SphereParticle> &bondtwonode1, const std::unique_ptr<SphereParticle> &bondtwonode2,
                                           double timeStep)
 {
     auto &manager = fiberbond1->getParticlePropertyManager();
@@ -744,13 +980,13 @@ void ContactForce::computeFiberFiberForce(const std::shared_ptr<SphereCylinderBo
         const Eigen::Vector3d &bondonenode2Velocity = bondonenode2->getVelocity();
 
         const Eigen::Vector3d &bondtwonode1Velocity = bondtwonode1->getVelocity();
-        const Eigen::Vector3d &bondtwonode2Velocity = bondtwonode1->getVelocity();
+        const Eigen::Vector3d &bondtwonode2Velocity = bondtwonode2->getVelocity();
 
         const Eigen::Vector3d &bondonenode1Omega = bondonenode1->getOmega();
         const Eigen::Vector3d &bondonenode2Omega = bondonenode2->getOmega();
 
         const Eigen::Vector3d &bondtwonode1Omega = bondtwonode1->getOmega();
-        const Eigen::Vector3d &bondtwonode2Omega = bondtwonode1->getOmega();
+        const Eigen::Vector3d &bondtwonode2Omega = bondtwonode2->getOmega();
 
         Eigen::Vector3d v1 = weights * (bondonenode2Velocity - bondonenode1Velocity) + bondonenode1Velocity;
 
@@ -805,11 +1041,12 @@ void ContactForce::computeFiberFiberForce(const std::shared_ptr<SphereCylinderBo
 
         double tangential_damping_constant = 1.8257 * modelparameterbeta[particletype_one][particletype_two] * sqrt(tangential_contact_stiffness * effectivemass[particletype_one][particletype_two]);
 
+        Eigen::Vector3d normal_damping_force = (normal_damping_constant * normal_relative_velocity_value) * normal_unit_vector;
         // Calculation of normal force using spring and dashpot normal forces
         Eigen::Vector3d normal_force =
-            ((normal_contact_stiffness * normal_overlap) * normal_unit_vector) +
-            ((normal_damping_constant * normal_relative_velocity_value) *
-             normal_unit_vector);
+            ((normal_contact_stiffness * normal_overlap) * normal_unit_vector) + normal_damping_force;
+
+        energyDissipation += std::fabs(normal_damping_force.dot(normal_relative_velocity * timeStep));
 
         // Calculation of tangential force using spring and dashpot tangential
         // forces. Since we need dashpot tangential force in the gross sliding again,
@@ -817,7 +1054,7 @@ void ContactForce::computeFiberFiberForce(const std::shared_ptr<SphereCylinderBo
         Eigen::Vector3d dashpot_tangential_force = tangential_damping_constant * tangential_relative_velocity;
         Eigen::Vector3d tangential_force = (tangential_contact_stiffness * modified_tangential_displacement) + dashpot_tangential_force;
 
-        double coulomb_threshold = effectiveslidingfriction[particletype_one][particletype_one] * normal_force.norm();
+        double coulomb_threshold = effectiveslidingfriction[particletype_one][particletype_two] * normal_force.norm();
 
         double tangential_force_value = tangential_force.norm();
         // Check for gross sliding
@@ -831,6 +1068,8 @@ void ContactForce::computeFiberFiberForce(const std::shared_ptr<SphereCylinderBo
             contact_info.tangentialDisplacement = tangential_overlap;
             tangential_force = (tangential_contact_stiffness * tangential_overlap) + dashpot_tangential_force;
         }
+        energyDissipation += std::fabs(tangential_force.dot(tangential_relative_velocity * timeStep));
+
         // Calculation of torque
         // Torque caused by tangential force (tangential_torque)
         Eigen::Vector3d tangential_torque1 = (fiber1Radius * normal_unit_vector).cross(tangential_force);
@@ -855,8 +1094,8 @@ void ContactForce::computeFiberFiberForce(const std::shared_ptr<SphereCylinderBo
         nextfiberfibercontactinformationlist[id1][id2] = contact_info;
     }
 }
-void ContactForce::computePlaneWallFiberForce(const std::shared_ptr<PlaneWall> &planewall, const std::shared_ptr<SphereCylinderBond> &fiberbond,
-                                              const std::shared_ptr<SphereParticle> &node1, const std::shared_ptr<SphereParticle> &node2, double timeStep)
+void ContactForce::computePlaneWallFiberForce(const std::unique_ptr<PlaneWall> &planewall, const std::unique_ptr<SphereCylinderBond> &fiberbond,
+                                              const std::unique_ptr<SphereParticle> &node1, const std::unique_ptr<SphereParticle> &node2, double timeStep)
 {
     Eigen::Vector3d sphereCenter1 = node1->getPosition();
     Eigen::Vector3d sphereCenter2 = node2->getPosition();
@@ -866,7 +1105,8 @@ void ContactForce::computePlaneWallFiberForce(const std::shared_ptr<PlaneWall> &
     PropertyTypeID fibertype = fiberbond->getType();
     PropertyTypeID walltype = planewall->getType();
 
-    double fiberRadius = manager->getFiberProperties(fibertype)->getRadius();
+    auto &fiberproperty = manager->getFiberProperties(fibertype);
+    double fiberRadius = fiberproperty->getRadius();
 
     // Retrieve the plane wall's point and normal
     Eigen::Vector3d planePoint = planewall->getCorner1();
@@ -928,7 +1168,7 @@ void ContactForce::computePlaneWallFiberForce(const std::shared_ptr<PlaneWall> &
         int wallId = planewall->getId();
         int fiberId = fiberbond->getId();
 
-        auto &innerMap = wallfibercontactinformationlist[wallId]; // Access or create the inner map
+        auto &innerMap = planewallfibercontactinformationlist[wallId]; // Access or create the inner map
         auto innerIt = innerMap.find(fiberId);
 
         if (innerIt == innerMap.end())
@@ -938,7 +1178,7 @@ void ContactForce::computePlaneWallFiberForce(const std::shared_ptr<PlaneWall> &
             innerMap[fiberId] = newContactInfo; // Insert the new contact information
         }
 
-        ContactInformation &contact_info = wallspherecontactinformationlist[wallId][fiberId];
+        ContactInformation &contact_info = planewallfibercontactinformationlist[wallId][fiberId];
 
         Eigen::Vector3d modified_tangential_displacement = contact_info.tangentialDisplacement + contact_info.previousTangentialVelocity * timeStep;
         // Updating the contact_info container based on the new calculated values
@@ -946,24 +1186,25 @@ void ContactForce::computePlaneWallFiberForce(const std::shared_ptr<PlaneWall> &
         contact_info.tangentialDisplacement = modified_tangential_displacement;
         contact_info.previousTangentialVelocity = tangential_relative_velocity;
 
-        double radius_times_overlap_sqrt = sqrt(manager->getSphereProperties(fibertype)->getRadius() * normal_overlap);
+        double radius_times_overlap_sqrt = sqrt(fiberRadius * normal_overlap);
 
         double sn = 2 * effectiveyoungsmodulus[walltype][fibertype] * radius_times_overlap_sqrt;
 
         double normal_contact_stiffness = 0.666666 * sn;
 
-        double normal_damping_constant = 1.8257 * modelparameterbeta[walltype][fibertype] * sqrt(sn * manager->getSphereProperties(fibertype)->getMass());
+        double normal_damping_constant = 1.8257 * modelparameterbeta[walltype][fibertype] * sqrt(sn * fiberproperty->getNodemass());
 
         // tangential stiffness
         double tangential_contact_stiffness = 8 * effectiveshearmodulus[walltype][fibertype] * radius_times_overlap_sqrt;
 
-        double tangential_damping_constant = 1.8257 * modelparameterbeta[walltype][fibertype] * sqrt(tangential_contact_stiffness * manager->getSphereProperties(fibertype)->getMass());
+        double tangential_damping_constant = 1.8257 * modelparameterbeta[walltype][fibertype] * sqrt(tangential_contact_stiffness * fiberproperty->getNodemass());
 
+        Eigen::Vector3d normal_damping_force = (normal_damping_constant * normal_relative_velocity_value) * normal_unit_vector;
         // Calculation of normal force using spring and dashpot normal forces
         Eigen::Vector3d normal_force =
-            ((normal_contact_stiffness * normal_overlap) * normal_unit_vector) +
-            ((normal_damping_constant * normal_relative_velocity_value) *
-             normal_unit_vector);
+            ((normal_contact_stiffness * normal_overlap) * normal_unit_vector) + normal_damping_force;
+
+        energyDissipation += std::fabs(normal_damping_force.dot(normal_relative_velocity * timeStep));
 
         // Calculation of tangential force using spring and dashpot tangential
         // forces. Since we need dashpot tangential force in the gross sliding again,
@@ -985,6 +1226,7 @@ void ContactForce::computePlaneWallFiberForce(const std::shared_ptr<PlaneWall> &
             contact_info.tangentialDisplacement = tangential_overlap;
             tangential_force = (tangential_contact_stiffness * tangential_overlap) + dashpot_tangential_force;
         }
+        energyDissipation += std::fabs(tangential_force.dot(tangential_relative_velocity * timeStep));
 
         // Calculation of torque
         // Torque caused by tangential force (tangential_torque)
@@ -1000,7 +1242,186 @@ void ContactForce::computePlaneWallFiberForce(const std::shared_ptr<PlaneWall> &
 
         contact_info.normalForce = normal_force;
         contact_info.tangentialForce = tangential_force;
-        nextwallfibercontactinformationlist[wallId][fiberId] = contact_info;
+        nextplanewallfibercontactinformationlist[wallId][fiberId] = contact_info;
+    }
+}
+void ContactForce::computeCylinderWallFiberForce(const std::unique_ptr<CylinderContainer> &cylinderWall, const std::unique_ptr<SphereCylinderBond> &fiberbond,
+                                                 const std::unique_ptr<SphereParticle> &node1, const std::unique_ptr<SphereParticle> &node2, double timeStep)
+{
+    Eigen::Vector3d sphereCenter1 = node1->getPosition();
+    Eigen::Vector3d sphereCenter2 = node2->getPosition();
+
+    const auto &manager = fiberbond->getParticlePropertyManager();
+
+    PropertyTypeID fibertype = fiberbond->getType();
+    PropertyTypeID walltype = cylinderWall->getType();
+
+    auto &fiberproperty = manager->getFiberProperties(fibertype);
+
+    double fiberRadius = fiberproperty->getRadius();
+    double cylinderRadius = cylinderWall->getRadius();
+    // Retrieve the cylinder wall's point
+    Eigen::Vector3d cylinderEnd = cylinderWall->getEndpoint();
+
+    Eigen::Vector3d cylinderStart = cylinderWall->getStartpoint();
+
+    // Calculate the axis direction of the cylinder
+    Eigen::Vector3d cylinderAxis = (cylinderEnd - cylinderStart).normalized();
+
+    // Calculate the vector from the start point of the cylinder to the sphere center
+    Eigen::Vector3d startToCenter1 = sphereCenter1 - cylinderStart;
+
+    // Project the vector onto the cylinder axis to find the closest point on the axis to the sphere center
+    double projection1 = startToCenter1.dot(cylinderAxis);
+    projection1 = std::clamp(projection1, 0.0, 1.0);
+    Eigen::Vector3d closestPoint1 = cylinderStart + projection1 * cylinderAxis;
+    // Eigen::Vector3d normal_unit_vector = sphereCenter1 - closestPoint;
+    double distanceToAxis1 = (sphereCenter1 - closestPoint1).norm();
+
+    Eigen::Vector3d startToCenter2 = sphereCenter2 - cylinderStart;
+
+    // Project the vector onto the cylinder axis to find the closest point on the axis to the sphere center
+    double projection2 = startToCenter2.dot(cylinderAxis);
+    projection2 = std::clamp(projection2, 0.0, 1.0);
+    Eigen::Vector3d closestPoint2 = cylinderStart + projection2 * cylinderAxis;
+    double distanceToAxis2 = (sphereCenter2 - closestPoint2).norm();
+
+    double normal_overlap1 = 0;
+    double normal_overlap2 = 0;
+    double weight_s = 0;
+    double weight_t = 0;
+    double weight = 0;
+
+    if (distanceToAxis1 > cylinderRadius)
+    {
+        normal_overlap1 = fiberRadius + cylinderRadius - distanceToAxis1;
+        normal_overlap2 = fiberRadius + cylinderRadius - distanceToAxis2;
+    }
+    else
+    {
+        normal_overlap1 = distanceToAxis1 - (cylinderRadius - fiberRadius);
+        normal_overlap2 = distanceToAxis2 - (cylinderRadius - fiberRadius);
+    }
+    if (normal_overlap1 > 0)
+    {
+        weight = normal_overlap1;
+        weight_t = projection1 * normal_overlap1;
+    }
+    if (normal_overlap2 > 0)
+    {
+        weight_s += normal_overlap2;
+        weight += normal_overlap2;
+        weight_t += projection2 * normal_overlap2;
+    }
+
+    double normal_overlap = normal_overlap1 > normal_overlap2 ? normal_overlap1 : normal_overlap2;
+
+    if (normal_overlap > 0)
+    {
+        weight_s = weight_s / weight;
+        weight_t = weight_t / weight;
+        Eigen::Vector3d closestPoint = cylinderStart + weight_t * cylinderAxis;
+        Eigen::Vector3d sphereCenter = (1 - weight_s) * sphereCenter1 + weight_s * sphereCenter2;
+        Eigen::Vector3d normal_unit_vector = (sphereCenter - closestPoint).normalized();
+        if (distanceToAxis1 > cylinderRadius)
+        {
+            normal_unit_vector = -normal_unit_vector;
+        }
+        const Eigen::Vector3d &node1Velocity = node1->getVelocity();
+        const Eigen::Vector3d &node2Velocity = node2->getVelocity();
+
+        const Eigen::Vector3d &node1Omega = node1->getOmega();
+        const Eigen::Vector3d &node2Omega = node2->getOmega();
+
+        Eigen::Vector3d fiber_velocity = weight_s * (node2Velocity - node1Velocity) + node1Velocity;
+        Eigen::Vector3d fiber_omega = weight_s * (node2Omega - node1Omega) + node1Omega;
+        // Calculation of contact relative velocity
+        Eigen::Vector3d contact_relative_velocity = fiber_velocity + (fiberRadius * fiber_omega).cross(normal_unit_vector);
+
+        double normal_relative_velocity_value = contact_relative_velocity.dot(normal_unit_vector);
+        // Calculation of normal relative velocity
+        Eigen::Vector3d normal_relative_velocity = normal_relative_velocity_value * normal_unit_vector;
+        // Calculation of tangential relative velocity
+        Eigen::Vector3d tangential_relative_velocity = contact_relative_velocity - normal_relative_velocity;
+        // modify tangential_overlap
+        int wallId = cylinderWall->getId();
+        int fiberId = fiberbond->getId();
+
+        auto &innerMap = cylinderwallfibercontactinformationlist[wallId]; // Access or create the inner map
+        auto innerIt = innerMap.find(fiberId);
+
+        if (innerIt == innerMap.end())
+        {
+            // Contact information for this pair does not exist, create a new one
+            ContactInformation newContactInfo(wallId, fiberId);
+            innerMap[fiberId] = newContactInfo; // Insert the new contact information
+        }
+
+        ContactInformation &contact_info = cylinderwallfibercontactinformationlist[wallId][fiberId];
+
+        Eigen::Vector3d modified_tangential_displacement = contact_info.tangentialDisplacement + contact_info.previousTangentialVelocity * timeStep;
+        // Updating the contact_info container based on the new calculated values
+
+        contact_info.tangentialDisplacement = modified_tangential_displacement;
+        contact_info.previousTangentialVelocity = tangential_relative_velocity;
+
+        double radius_times_overlap_sqrt = sqrt(fiberRadius * normal_overlap);
+
+        double sn = 2 * effectiveyoungsmodulus[walltype][fibertype] * radius_times_overlap_sqrt;
+
+        double normal_contact_stiffness = 0.666666 * sn;
+
+        double normal_damping_constant = 1.8257 * modelparameterbeta[walltype][fibertype] * sqrt(sn * fiberproperty->getNodemass());
+
+        // tangential stiffness
+        double tangential_contact_stiffness = 8 * effectiveshearmodulus[walltype][fibertype] * radius_times_overlap_sqrt;
+
+        double tangential_damping_constant = 1.8257 * modelparameterbeta[walltype][fibertype] * sqrt(tangential_contact_stiffness * fiberproperty->getNodemass());
+
+        Eigen::Vector3d normal_damping_force = (normal_damping_constant * normal_relative_velocity_value) * normal_unit_vector;
+        // Calculation of normal force using spring and dashpot normal forces
+        Eigen::Vector3d normal_force =
+            ((normal_contact_stiffness * normal_overlap) * normal_unit_vector) + normal_damping_force;
+
+        energyDissipation += std::fabs(normal_damping_force.dot(normal_relative_velocity * timeStep));
+
+        // Calculation of tangential force using spring and dashpot tangential
+        // forces. Since we need dashpot tangential force in the gross sliding again,
+        // we define it as a separate variable
+        Eigen::Vector3d dashpot_tangential_force = tangential_damping_constant * tangential_relative_velocity;
+        Eigen::Vector3d tangential_force = (tangential_contact_stiffness * modified_tangential_displacement) + dashpot_tangential_force;
+
+        double coulomb_threshold = effectiveslidingfriction[walltype][fibertype] * normal_force.norm();
+
+        double tangential_force_value = tangential_force.norm();
+        // Check for gross sliding
+        if (tangential_force_value > coulomb_threshold)
+        {
+            // Gross sliding occurs and the tangential overlap and tangnetial
+            // force are limited to Coulumb's criterion
+            Eigen::Vector3d tangential_overlap = (coulomb_threshold * (tangential_force / (tangential_force_value + DBL_MIN)) - dashpot_tangential_force) /
+                                                 (tangential_contact_stiffness + DBL_MIN);
+
+            contact_info.tangentialDisplacement = tangential_overlap;
+            tangential_force = (tangential_contact_stiffness * tangential_overlap) + dashpot_tangential_force;
+        }
+        energyDissipation += std::fabs(tangential_force.dot(tangential_relative_velocity * timeStep));
+
+        // Calculation of torque
+        // Torque caused by tangential force (tangential_torque)
+        Eigen::Vector3d tangential_torque1 = (fiberRadius * normal_unit_vector).cross(tangential_force);
+
+        Eigen::Vector3d results_force = normal_force + tangential_force;
+
+        node1->addForce((weight_s - 1) * results_force);
+        node2->addForce(-weight_s * results_force);
+        node1->addTorque((weight_s - 1) * tangential_torque1);
+        node2->addTorque(-weight_s * tangential_torque1);
+        cylinderWall->addForce(results_force);
+
+        contact_info.normalForce = normal_force;
+        contact_info.tangentialForce = tangential_force;
+        nextcylinderwallfibercontactinformationlist[wallId][fiberId] = contact_info;
     }
 }
 void ContactForce::updateContactInformation()
@@ -1008,29 +1429,35 @@ void ContactForce::updateContactInformation()
     spherespherecontactinformationlist.swap(nextspherespherecontactinformationlist);
     nextspherespherecontactinformationlist.clear();
 
-    wallspherecontactinformationlist.swap(nextwallspherecontactinformationlist);
-    nextwallspherecontactinformationlist.clear();
+    spherefibercontactinformationlist.swap(nextspherefibercontactinformationlist);
+    nextspherefibercontactinformationlist.clear();
+
+    planewallspherecontactinformationlist.swap(nextplanewallspherecontactinformationlist);
+    nextplanewallspherecontactinformationlist.clear();
+
+    planewallfibercontactinformationlist.swap(nextplanewallfibercontactinformationlist);
+    nextplanewallfibercontactinformationlist.clear();
 
     fiberfibercontactinformationlist.swap(nextfiberfibercontactinformationlist);
     nextfiberfibercontactinformationlist.clear();
 
-    spherefibercontactinformationlist.swap(nextspherefibercontactinformationlist);
-    nextspherefibercontactinformationlist.clear();
+    cylinderwallspherecontactinformationlist.swap(nextcylinderwallspherecontactinformationlist);
+    nextcylinderwallspherecontactinformationlist.clear();
 
-    wallfibercontactinformationlist.swap(nextwallfibercontactinformationlist);
-    nextwallfibercontactinformationlist.clear();
+    cylinderwallfibercontactinformationlist.swap(nextcylinderwallfibercontactinformationlist);
+    nextcylinderwallfibercontactinformationlist.clear();
 }
 std::unordered_map<int, std::unordered_map<int, ContactInformation>> &ContactForce::getSphereSphereContactInformationList()
 {
     return spherespherecontactinformationlist;
 }
-std::unordered_map<int, std::unordered_map<int, ContactInformation>> &ContactForce::getWallSphereContactInformationList()
+std::unordered_map<int, std::unordered_map<int, ContactInformation>> &ContactForce::getplanewallSphereContactInformationList()
 {
-    return wallspherecontactinformationlist;
+    return planewallspherecontactinformationlist;
 }
-std::unordered_map<int, std::unordered_map<int, ContactInformation>> &ContactForce::getWallFiberContactInformationList()
+std::unordered_map<int, std::unordered_map<int, ContactInformation>> &ContactForce::getplanewallFiberContactInformationList()
 {
-    return wallfibercontactinformationlist;
+    return planewallfibercontactinformationlist;
 }
 std::unordered_map<int, std::unordered_map<int, ContactInformation>> &ContactForce::getSphereFiberContactInformationList()
 {
@@ -1039,4 +1466,12 @@ std::unordered_map<int, std::unordered_map<int, ContactInformation>> &ContactFor
 std::unordered_map<int, std::unordered_map<int, ContactInformation>> &ContactForce::getFiberFiberContactInformationList()
 {
     return fiberfibercontactinformationlist;
+}
+std::unordered_map<int, std::unordered_map<int, ContactInformation>> &ContactForce::getcylinderwallSphereContactInformationList()
+{
+    return cylinderwallspherecontactinformationlist;
+}
+std::unordered_map<int, std::unordered_map<int, ContactInformation>> &ContactForce::getcylinderwallFiberContactInformationList()
+{
+    return cylinderwallfibercontactinformationlist;
 }

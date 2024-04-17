@@ -5,7 +5,7 @@
             "name": "Debug (MSVC)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/tests/Debug/GranularDamper.exe",
+            "program": "${workspaceFolder}/build/tests/Debug/ParallelTest.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

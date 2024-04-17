@@ -6,11 +6,11 @@ add_subdirectory(Visualization)
 add_subdirectory(ContactDetection)
 add_subdirectory(ContactForce)
 add_subdirectory(DynamicBoundaryMover)
-add_subdirectory(EventTask)
 # Define the DEM_lib library, which may include other source files in the src directory
 add_library(DEM_lib
     DEMProperties.cpp
     DEMModel.cpp
+    ParallelDEMModel.cpp
 )
 
 # Link the DEM_lib with ParticleProperties_lib if needed
@@ -22,7 +22,6 @@ target_link_libraries(DEM_lib
     ContactDetection_lib
     ContactForce_lib
     DynamicBoundaryMover_lib
-    EventTask_lib
     ${MPI_CXX_LIBRARIES}
 )
 
@@ -36,6 +35,5 @@ target_include_directories(DEM_lib PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/ContactDetection
     ${CMAKE_CURRENT_SOURCE_DIR}/ContactForce
     ${CMAKE_CURRENT_SOURCE_DIR}/DynamicBoundaryMover
-    ${CMAKE_CURRENT_SOURCE_DIR}/EventTask
 )
 

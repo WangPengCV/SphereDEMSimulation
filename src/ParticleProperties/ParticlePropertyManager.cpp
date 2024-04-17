@@ -28,3 +28,11 @@ void ParticlePropertyManager::addFiberProperties(const PropertyTypeID &id, std::
     } 
     propertiesMap[id] = properties;
 }
+
+void ParticlePropertyManager::addCylinerwallProperties(const PropertyTypeID &id, std::shared_ptr<CylinderwallProperties> &properties)
+{
+    if (propertiesMap.find(id) != propertiesMap.end()) {
+        throw std::runtime_error("Property with the same ID already exists.");
+    } 
+    propertiesMap[id] = properties;
+}

@@ -2,6 +2,7 @@
 
 void PlaneWall::generateMesh(double meshResolution)
 {
+    meshResolution = 0.99 * meshResolution;
     meshVertices.clear(); // Clear existing vertices
 
     // Calculate the basis vectors for the plane
@@ -48,23 +49,23 @@ const Eigen::Vector3d &PlaneWall::getVelocity() const
 {
     return velocity;
 }
-void PlaneWall::setNormal(Eigen::Vector3d &Normal)
+void PlaneWall::setNormal(const Eigen::Vector3d &Normal)
 {
     normal = Normal;
 }
-void PlaneWall::setCorner1(Eigen::Vector3d &Corner1)
+void PlaneWall::setCorner1(const Eigen::Vector3d &Corner1)
 {
     corner1 = Corner1;
 }
-void PlaneWall::setCorner2(Eigen::Vector3d &Corner2)
+void PlaneWall::setCorner2(const Eigen::Vector3d &Corner2)
 {
     corner2 = Corner2;
 }
-void PlaneWall::setCorner3(Eigen::Vector3d &Corner3)
+void PlaneWall::setCorner3(const Eigen::Vector3d &Corner3)
 {
     corner3 = Corner3;
 }
-void PlaneWall::setVelocity(Eigen::Vector3d &Velociy)
+void PlaneWall::setVelocity(const Eigen::Vector3d &Velociy)
 {
     velocity = Velociy;
 }
@@ -76,10 +77,17 @@ void PlaneWall::resetForce()
 {
     force.setZero();
 }
-
+void PlaneWall::setMass(std::shared_ptr<ParticlePropertyManager> &manager)
+{
+    double thickness = manager->getPlanewallProperties(this->getType())->getThickness();
+    Eigen::Vector3d u = (corner2 - corner1);
+    Eigen::Vector3d v = (corner3 - corner2);
+    mass = manager->getPlanewallProperties(this->getType())->getDensity() * (u.norm() * v.norm() * thickness);
+}
 std::string PlaneWall::save_tostring() const
 {
     std::ostringstream ss;
+    ss.precision(std::numeric_limits<double>::digits10 + 1);
     ss << "PLANEWALL, " << id << ", " << type.getCategory() << ", " << type.getSubType() << ", " << state << ", "
        << normal.x() << ", " << normal.y() << ", " << normal.z() << ", "
        << corner1.x() << ", " << corner1.y() << ", " << corner1.z() << ", "

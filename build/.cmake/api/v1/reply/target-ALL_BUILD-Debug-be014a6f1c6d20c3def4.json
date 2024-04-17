@@ -1,0 +1,69 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "VisualizeGridBasedContactDetection::@a44f0ac069e85531cdee"
+		},
+		{
+			"id" : "DEM::@a44f0ac069e85531cdee"
+		},
+		{
+			"id" : "Particle_lib::@51f258b71638d180663f"
+		},
+		{
+			"id" : "DynamicBoundaryMover_lib::@04e1fff3912e333a1207"
+		},
+		{
+			"id" : "ParticleProperties_lib::@99c85c404489b7137797"
+		},
+		{
+			"id" : "DamainDecomposition::@a44f0ac069e85531cdee"
+		},
+		{
+			"id" : "PostProcess::@a44f0ac069e85531cdee"
+		},
+		{
+			"id" : "ParticlePropertiesTest::@a44f0ac069e85531cdee"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "SphereParticleTest::@a44f0ac069e85531cdee"
+		},
+		{
+			"id" : "ParallelTest::@a44f0ac069e85531cdee"
+		},
+		{
+			"id" : "ContactDetection_lib::@7b2c70fc7da998445a4b"
+		},
+		{
+			"id" : "DEM_lib::@145eef247bfb46b6828c"
+		}
+	],
+	"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+	"isGeneratorProvided" : true,
+	"name" : "ALL_BUILD",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

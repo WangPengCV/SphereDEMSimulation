@@ -1,0 +1,17 @@
+F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/ALL_BUILD.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/ZERO_CHECK.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/src/CMakeFiles/DEM_lib.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/src/ParticleProperties/CMakeFiles/ParticleProperties_lib.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/src/Particle/CMakeFiles/Particle_lib.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/src/BoundaryCondition/CMakeFiles/BoundaryCondition_lib.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/src/Visualization/CMakeFiles/Visualization_lib.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/src/ContactDetection/CMakeFiles/ContactDetection_lib.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/src/ContactForce/CMakeFiles/ContactForce_lib.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/src/DynamicBoundaryMover/CMakeFiles/DynamicBoundaryMover_lib.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/tests/CMakeFiles/SphereParticleTest.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/tests/CMakeFiles/ParticlePropertiesTest.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/tests/CMakeFiles/VisualizeGridBasedContactDetection.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/tests/CMakeFiles/DEM.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/tests/CMakeFiles/PostProcess.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/tests/CMakeFiles/ParallelTest.dir
+F:/PersonWeb/Project/SphereDEMSimulation/build/tests/CMakeFiles/DamainDecomposition.dir

@@ -2,12 +2,14 @@
 
 #include <vtkSmartPointer.h>
 #include "DEMProperties.h"
+#include "LineCylinderSource.h"
 class vtkPoints;
 class vtkRenderer;
 class vtkRenderWindow;
 class vtkRenderWindowInteractor;
 class vtkPolyData;
 class vtkSphereSource;
+class vtkCylinderSource;
 class vtkActor;
 class vtkPlaneSource;
 class vtkCellArray;
@@ -41,6 +43,11 @@ private:
     std::vector<vtkSmartPointer<vtkPlaneSource>> planeWallSource;
     std::vector<vtkSmartPointer<vtkActor>> planeWallActor;
 
+    //cylinder wall
+    std::vector<vtkSmartPointer<LineCylinderSource>> cylinderWallSource;
+    std::vector<vtkSmartPointer<vtkActor>> cylinderWallActor;
+
+    void UpdateCylinderWall();
     void UpdatePlaneWall();
     void UpdateSphere();
     void UpdataFibers();

@@ -24,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.3.1+2badb37d1 for .NET Framework
-      生成启动时间为 2024/3/1 18:58:19。
+      生成启动时间为 2024/4/17 12:15:14。
       节点 1 上的项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\3.28.0-rc5\\CompilerIdC\\CompilerIdC.vcxproj”(默认目标)。
       PrepareForBuild:
         正在创建目录“Debug\\”。
@@ -50,7 +50,7 @@ events:
           0 个警告
           0 个错误
       
-      已用时间 00:00:01.49
+      已用时间 00:00:06.42
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -76,7 +76,7 @@ events:
       The output was:
       0
       MSBuild version 17.3.1+2badb37d1 for .NET Framework
-      生成启动时间为 2024/3/1 18:58:21。
+      生成启动时间为 2024/4/17 12:15:21。
       节点 1 上的项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\3.28.0-rc5\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)。
       PrepareForBuild:
         正在创建目录“Debug\\”。
@@ -102,7 +102,7 @@ events:
           0 个警告
           0 个错误
       
-      已用时间 00:00:00.74
+      已用时间 00:00:00.98
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -121,8 +121,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-cik5k8"
-      binary: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-cik5k8"
+      source: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-k22jb6"
+      binary: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-k22jb6"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -131,37 +131,37 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-cik5k8'
+        Change Dir: 'F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-k22jb6'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_df8d5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2c9b2.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.3.1+2badb37d1 for .NET Framework
-        生成启动时间为 2024/3/1 18:58:24。
-        节点 1 上的项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cik5k8\\cmTC_df8d5.vcxproj”(默认目标)。
+        生成启动时间为 2024/4/17 12:15:23。
+        节点 1 上的项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k22jb6\\cmTC_2c9b2.vcxproj”(默认目标)。
         PrepareForBuild:
-          正在创建目录“cmTC_df8d5.dir\\Debug\\”。
-          正在创建目录“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cik5k8\\Debug\\”。
-          正在创建目录“cmTC_df8d5.dir\\Debug\\cmTC_df8d5.tlog\\”。
+          正在创建目录“cmTC_2c9b2.dir\\Debug\\”。
+          正在创建目录“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k22jb6\\Debug\\”。
+          正在创建目录“cmTC_2c9b2.dir\\Debug\\cmTC_2c9b2.tlog\\”。
         InitializeBuildStatus:
-          正在创建“cmTC_df8d5.dir\\Debug\\cmTC_df8d5.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在创建“cmTC_2c9b2.dir\\Debug\\cmTC_2c9b2.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_df8d5.dir\\Debug\\\\" /Fd"cmTC_df8d5.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\cmake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2c9b2.dir\\Debug\\\\" /Fd"cmTC_2c9b2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\cmake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
           用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.33.31630 版
           CMakeCCompilerABI.c
           版权所有(C) Microsoft Corporation。保留所有权利。
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_df8d5.dir\\Debug\\\\" /Fd"cmTC_df8d5.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\cmake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2c9b2.dir\\Debug\\\\" /Fd"cmTC_2c9b2.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\cmake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cik5k8\\Debug\\cmTC_df8d5.exe" /INCREMENTAL /ILK:"cmTC_df8d5.dir\\Debug\\cmTC_df8d5.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-cik5k8/Debug/cmTC_df8d5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-cik5k8/Debug/cmTC_df8d5.lib" /MACHINE:X64  /machine:x64 cmTC_df8d5.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_df8d5.vcxproj -> F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cik5k8\\Debug\\cmTC_df8d5.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k22jb6\\Debug\\cmTC_2c9b2.exe" /INCREMENTAL /ILK:"cmTC_2c9b2.dir\\Debug\\cmTC_2c9b2.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-k22jb6/Debug/cmTC_2c9b2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-k22jb6/Debug/cmTC_2c9b2.lib" /MACHINE:X64  /machine:x64 cmTC_2c9b2.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_2c9b2.vcxproj -> F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k22jb6\\Debug\\cmTC_2c9b2.exe
         FinalizeBuildStatus:
-          正在删除文件“cmTC_df8d5.dir\\Debug\\cmTC_df8d5.tlog\\unsuccessfulbuild”。
-          正在对“cmTC_df8d5.dir\\Debug\\cmTC_df8d5.tlog\\cmTC_df8d5.lastbuildstate”执行 Touch 任务。
-        已完成生成项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-cik5k8\\cmTC_df8d5.vcxproj”(默认目标)的操作。
+          正在删除文件“cmTC_2c9b2.dir\\Debug\\cmTC_2c9b2.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_2c9b2.dir\\Debug\\cmTC_2c9b2.tlog\\cmTC_2c9b2.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k22jb6\\cmTC_2c9b2.vcxproj”(默认目标)的操作。
         
         已成功生成。
             0 个警告
             0 个错误
         
-        已用时间 00:00:00.89
+        已用时间 00:00:00.99
         
       exitCode: 0
   -
@@ -173,8 +173,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-4d6g9i"
-      binary: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-4d6g9i"
+      source: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-b2tux0"
+      binary: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-b2tux0"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -183,37 +183,37 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-4d6g9i'
+        Change Dir: 'F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-b2tux0'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_fd533.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d4113.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.3.1+2badb37d1 for .NET Framework
-        生成启动时间为 2024/3/1 18:58:25。
-        节点 1 上的项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4d6g9i\\cmTC_fd533.vcxproj”(默认目标)。
+        生成启动时间为 2024/4/17 12:15:24。
+        节点 1 上的项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b2tux0\\cmTC_d4113.vcxproj”(默认目标)。
         PrepareForBuild:
-          正在创建目录“cmTC_fd533.dir\\Debug\\”。
-          正在创建目录“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4d6g9i\\Debug\\”。
-          正在创建目录“cmTC_fd533.dir\\Debug\\cmTC_fd533.tlog\\”。
+          正在创建目录“cmTC_d4113.dir\\Debug\\”。
+          正在创建目录“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b2tux0\\Debug\\”。
+          正在创建目录“cmTC_d4113.dir\\Debug\\cmTC_d4113.tlog\\”。
         InitializeBuildStatus:
-          正在创建“cmTC_fd533.dir\\Debug\\cmTC_fd533.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在创建“cmTC_d4113.dir\\Debug\\cmTC_d4113.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_fd533.dir\\Debug\\\\" /Fd"cmTC_fd533.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\cmake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_d4113.dir\\Debug\\\\" /Fd"cmTC_d4113.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\cmake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
           用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.33.31630 版
           CMakeCXXCompilerABI.cpp
           版权所有(C) Microsoft Corporation。保留所有权利。
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_fd533.dir\\Debug\\\\" /Fd"cmTC_fd533.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\cmake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /std:c++17 /Fo"cmTC_d4113.dir\\Debug\\\\" /Fd"cmTC_d4113.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\cmake\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4d6g9i\\Debug\\cmTC_fd533.exe" /INCREMENTAL /ILK:"cmTC_fd533.dir\\Debug\\cmTC_fd533.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-4d6g9i/Debug/cmTC_fd533.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-4d6g9i/Debug/cmTC_fd533.lib" /MACHINE:X64  /machine:x64 cmTC_fd533.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_fd533.vcxproj -> F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4d6g9i\\Debug\\cmTC_fd533.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b2tux0\\Debug\\cmTC_d4113.exe" /INCREMENTAL /ILK:"cmTC_d4113.dir\\Debug\\cmTC_d4113.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-b2tux0/Debug/cmTC_d4113.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-b2tux0/Debug/cmTC_d4113.lib" /MACHINE:X64  /machine:x64 cmTC_d4113.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_d4113.vcxproj -> F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b2tux0\\Debug\\cmTC_d4113.exe
         FinalizeBuildStatus:
-          正在删除文件“cmTC_fd533.dir\\Debug\\cmTC_fd533.tlog\\unsuccessfulbuild”。
-          正在对“cmTC_fd533.dir\\Debug\\cmTC_fd533.tlog\\cmTC_fd533.lastbuildstate”执行 Touch 任务。
-        已完成生成项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4d6g9i\\cmTC_fd533.vcxproj”(默认目标)的操作。
+          正在删除文件“cmTC_d4113.dir\\Debug\\cmTC_d4113.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_d4113.dir\\Debug\\cmTC_d4113.tlog\\cmTC_d4113.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b2tux0\\cmTC_d4113.vcxproj”(默认目标)的操作。
         
         已成功生成。
             0 个警告
             0 个错误
         
-        已用时间 00:00:00.88
+        已用时间 00:00:00.92
         
       exitCode: 0
   -
@@ -230,8 +230,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-72zssc"
-      binary: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-72zssc"
+      source: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-lvfxop"
+      binary: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-lvfxop"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -241,37 +241,37 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-72zssc'
+        Change Dir: 'F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-lvfxop'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_494f9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7f0d7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.3.1+2badb37d1 for .NET Framework
-        生成启动时间为 2024/3/1 18:58:27。
-        节点 1 上的项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72zssc\\cmTC_494f9.vcxproj”(默认目标)。
+        生成启动时间为 2024/4/17 12:15:27。
+        节点 1 上的项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lvfxop\\cmTC_7f0d7.vcxproj”(默认目标)。
         PrepareForBuild:
-          正在创建目录“cmTC_494f9.dir\\Debug\\”。
-          正在创建目录“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72zssc\\Debug\\”。
-          正在创建目录“cmTC_494f9.dir\\Debug\\cmTC_494f9.tlog\\”。
+          正在创建目录“cmTC_7f0d7.dir\\Debug\\”。
+          正在创建目录“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lvfxop\\Debug\\”。
+          正在创建目录“cmTC_7f0d7.dir\\Debug\\cmTC_7f0d7.tlog\\”。
         InitializeBuildStatus:
-          正在创建“cmTC_494f9.dir\\Debug\\cmTC_494f9.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在创建“cmTC_7f0d7.dir\\Debug\\cmTC_7f0d7.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_494f9.dir\\Debug\\\\" /Fd"cmTC_494f9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72zssc\\src.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7f0d7.dir\\Debug\\\\" /Fd"cmTC_7f0d7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lvfxop\\src.c"
           用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.33.31630 版
           src.c
           版权所有(C) Microsoft Corporation。保留所有权利。
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_494f9.dir\\Debug\\\\" /Fd"cmTC_494f9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72zssc\\src.c"
-        F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72zssc\\src.c(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72zssc\\cmTC_494f9.vcxproj]
-        已完成生成项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72zssc\\cmTC_494f9.vcxproj”(默认目标)的操作 - 失败。
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7f0d7.dir\\Debug\\\\" /Fd"cmTC_7f0d7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lvfxop\\src.c"
+        F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lvfxop\\src.c(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lvfxop\\cmTC_7f0d7.vcxproj]
+        已完成生成项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lvfxop\\cmTC_7f0d7.vcxproj”(默认目标)的操作 - 失败。
         
         生成失败。
         
-        “F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72zssc\\cmTC_494f9.vcxproj”(默认目标) (1) ->
+        “F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lvfxop\\cmTC_7f0d7.vcxproj”(默认目标) (1) ->
         (ClCompile 目标) -> 
-          F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72zssc\\src.c(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-72zssc\\cmTC_494f9.vcxproj]
+          F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lvfxop\\src.c(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-lvfxop\\cmTC_7f0d7.vcxproj]
         
             0 个警告
             1 个错误
         
-        已用时间 00:00:00.38
+        已用时间 00:00:00.58
         
       exitCode: 1
   -
@@ -287,8 +287,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-p7zygb"
-      binary: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-p7zygb"
+      source: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-v0pwpc"
+      binary: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-v0pwpc"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -298,39 +298,39 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-p7zygb'
+        Change Dir: 'F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-v0pwpc'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b9cfa.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8fd66.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.3.1+2badb37d1 for .NET Framework
-        生成启动时间为 2024/3/1 18:58:28。
-        节点 1 上的项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p7zygb\\cmTC_b9cfa.vcxproj”(默认目标)。
+        生成启动时间为 2024/4/17 12:15:28。
+        节点 1 上的项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v0pwpc\\cmTC_8fd66.vcxproj”(默认目标)。
         PrepareForBuild:
-          正在创建目录“cmTC_b9cfa.dir\\Debug\\”。
-          正在创建目录“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p7zygb\\Debug\\”。
-          正在创建目录“cmTC_b9cfa.dir\\Debug\\cmTC_b9cfa.tlog\\”。
+          正在创建目录“cmTC_8fd66.dir\\Debug\\”。
+          正在创建目录“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v0pwpc\\Debug\\”。
+          正在创建目录“cmTC_8fd66.dir\\Debug\\cmTC_8fd66.tlog\\”。
         InitializeBuildStatus:
-          正在创建“cmTC_b9cfa.dir\\Debug\\cmTC_b9cfa.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在创建“cmTC_8fd66.dir\\Debug\\cmTC_8fd66.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b9cfa.dir\\Debug\\\\" /Fd"cmTC_b9cfa.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p7zygb\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8fd66.dir\\Debug\\\\" /Fd"cmTC_8fd66.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v0pwpc\\CheckFunctionExists.c"
           用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.33.31630 版
           CheckFunctionExists.c
           版权所有(C) Microsoft Corporation。保留所有权利。
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b9cfa.dir\\Debug\\\\" /Fd"cmTC_b9cfa.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p7zygb\\CheckFunctionExists.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8fd66.dir\\Debug\\\\" /Fd"cmTC_8fd66.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v0pwpc\\CheckFunctionExists.c"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p7zygb\\Debug\\cmTC_b9cfa.exe" /INCREMENTAL /ILK:"cmTC_b9cfa.dir\\Debug\\cmTC_b9cfa.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-p7zygb/Debug/cmTC_b9cfa.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-p7zygb/Debug/cmTC_b9cfa.lib" /MACHINE:X64  /machine:x64 cmTC_b9cfa.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p7zygb\\cmTC_b9cfa.vcxproj]
-        已完成生成项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p7zygb\\cmTC_b9cfa.vcxproj”(默认目标)的操作 - 失败。
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v0pwpc\\Debug\\cmTC_8fd66.exe" /INCREMENTAL /ILK:"cmTC_8fd66.dir\\Debug\\cmTC_8fd66.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-v0pwpc/Debug/cmTC_8fd66.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-v0pwpc/Debug/cmTC_8fd66.lib" /MACHINE:X64  /machine:x64 cmTC_8fd66.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v0pwpc\\cmTC_8fd66.vcxproj]
+        已完成生成项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v0pwpc\\cmTC_8fd66.vcxproj”(默认目标)的操作 - 失败。
         
         生成失败。
         
-        “F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p7zygb\\cmTC_b9cfa.vcxproj”(默认目标) (1) ->
+        “F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v0pwpc\\cmTC_8fd66.vcxproj”(默认目标) (1) ->
         (Link 目标) -> 
-          LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-p7zygb\\cmTC_b9cfa.vcxproj]
+          LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-v0pwpc\\cmTC_8fd66.vcxproj]
         
             0 个警告
             1 个错误
         
-        已用时间 00:00:00.45
+        已用时间 00:00:00.83
         
       exitCode: 1
   -
@@ -346,8 +346,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-du1fq1"
-      binary: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-du1fq1"
+      source: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-egm5l2"
+      binary: "F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-egm5l2"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -357,39 +357,39 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-du1fq1'
+        Change Dir: 'F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-egm5l2'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_07e1c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_1956f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.3.1+2badb37d1 for .NET Framework
-        生成启动时间为 2024/3/1 18:58:28。
-        节点 1 上的项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-du1fq1\\cmTC_07e1c.vcxproj”(默认目标)。
+        生成启动时间为 2024/4/17 12:15:29。
+        节点 1 上的项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-egm5l2\\cmTC_1956f.vcxproj”(默认目标)。
         PrepareForBuild:
-          正在创建目录“cmTC_07e1c.dir\\Debug\\”。
-          正在创建目录“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-du1fq1\\Debug\\”。
-          正在创建目录“cmTC_07e1c.dir\\Debug\\cmTC_07e1c.tlog\\”。
+          正在创建目录“cmTC_1956f.dir\\Debug\\”。
+          正在创建目录“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-egm5l2\\Debug\\”。
+          正在创建目录“cmTC_1956f.dir\\Debug\\cmTC_1956f.tlog\\”。
         InitializeBuildStatus:
-          正在创建“cmTC_07e1c.dir\\Debug\\cmTC_07e1c.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在创建“cmTC_1956f.dir\\Debug\\cmTC_1956f.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_07e1c.dir\\Debug\\\\" /Fd"cmTC_07e1c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-du1fq1\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1956f.dir\\Debug\\\\" /Fd"cmTC_1956f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-egm5l2\\CheckFunctionExists.c"
           用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.33.31630 版
           CheckFunctionExists.c
           版权所有(C) Microsoft Corporation。保留所有权利。
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_07e1c.dir\\Debug\\\\" /Fd"cmTC_07e1c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-du1fq1\\CheckFunctionExists.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1956f.dir\\Debug\\\\" /Fd"cmTC_1956f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-egm5l2\\CheckFunctionExists.c"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-du1fq1\\Debug\\cmTC_07e1c.exe" /INCREMENTAL /ILK:"cmTC_07e1c.dir\\Debug\\cmTC_07e1c.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-du1fq1/Debug/cmTC_07e1c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-du1fq1/Debug/cmTC_07e1c.lib" /MACHINE:X64  /machine:x64 cmTC_07e1c.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-du1fq1\\cmTC_07e1c.vcxproj]
-        已完成生成项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-du1fq1\\cmTC_07e1c.vcxproj”(默认目标)的操作 - 失败。
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-egm5l2\\Debug\\cmTC_1956f.exe" /INCREMENTAL /ILK:"cmTC_1956f.dir\\Debug\\cmTC_1956f.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-egm5l2/Debug/cmTC_1956f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:/PersonWeb/Project/SphereDEMSimulation/build/CMakeFiles/CMakeScratch/TryCompile-egm5l2/Debug/cmTC_1956f.lib" /MACHINE:X64  /machine:x64 cmTC_1956f.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-egm5l2\\cmTC_1956f.vcxproj]
+        已完成生成项目“F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-egm5l2\\cmTC_1956f.vcxproj”(默认目标)的操作 - 失败。
         
         生成失败。
         
-        “F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-du1fq1\\cmTC_07e1c.vcxproj”(默认目标) (1) ->
+        “F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-egm5l2\\cmTC_1956f.vcxproj”(默认目标) (1) ->
         (Link 目标) -> 
-          LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-du1fq1\\cmTC_07e1c.vcxproj]
+          LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [F:\\PersonWeb\\Project\\SphereDEMSimulation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-egm5l2\\cmTC_1956f.vcxproj]
         
             0 个警告
             1 个错误
         
-        已用时间 00:00:00.44
+        已用时间 00:00:00.95
         
       exitCode: 1
 ...

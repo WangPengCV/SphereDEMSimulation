@@ -1,0 +1,1368 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						9
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						16
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"jsonFile" : "directory-src-Debug-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/ParticleProperties",
+					"jsonFile" : "directory-src.ParticleProperties-Debug-c61106b54e1615fa620e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/ParticleProperties",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "src/Particle",
+					"jsonFile" : "directory-src.Particle-Debug-595c1b06769a222cf3e1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/Particle",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "src/BoundaryCondition",
+					"jsonFile" : "directory-src.BoundaryCondition-Debug-658f417f61513b8c3ffb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/BoundaryCondition",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/Visualization",
+					"jsonFile" : "directory-src.Visualization-Debug-3628295bfaadc6a2023c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/Visualization",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "src/ContactDetection",
+					"jsonFile" : "directory-src.ContactDetection-Debug-f33d940d67142b52dd27.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/ContactDetection",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/ContactForce",
+					"jsonFile" : "directory-src.ContactForce-Debug-cae06f4088948daecbc0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/ContactForce",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/DynamicBoundaryMover",
+					"jsonFile" : "directory-src.DynamicBoundaryMover-Debug-b7063a00b4086f02b68a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/DynamicBoundaryMover",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-Debug-70e4927a02b591d5c1f8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						4,
+						6,
+						8,
+						9,
+						12,
+						13,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					],
+					"name" : "DEMSimulation",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Debug-be014a6f1c6d20c3def4.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "BoundaryCondition_lib::@08fd446aa65415c9161c",
+					"jsonFile" : "target-BoundaryCondition_lib-Debug-43d2d4d91728ebf96708.json",
+					"name" : "BoundaryCondition_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "ContactDetection_lib::@7b2c70fc7da998445a4b",
+					"jsonFile" : "target-ContactDetection_lib-Debug-0f122c59b1ca8ab5be4c.json",
+					"name" : "ContactDetection_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "ContactForce_lib::@6f0f18b5a7d070dc06ae",
+					"jsonFile" : "target-ContactForce_lib-Debug-904e68162489e2f3b1da.json",
+					"name" : "ContactForce_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "DEM::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-DEM-Debug-b3645fcbb9dad891d044.json",
+					"name" : "DEM",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "DEM_lib::@145eef247bfb46b6828c",
+					"jsonFile" : "target-DEM_lib-Debug-068800063bc1927154c2.json",
+					"name" : "DEM_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "DamainDecomposition::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-DamainDecomposition-Debug-5f1b569a7cccdb9d8239.json",
+					"name" : "DamainDecomposition",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "DynamicBoundaryMover_lib::@04e1fff3912e333a1207",
+					"jsonFile" : "target-DynamicBoundaryMover_lib-Debug-7b0e1faf2cb9cd8a0926.json",
+					"name" : "DynamicBoundaryMover_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ParallelTest::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-ParallelTest-Debug-08f23acf2a7805d22b37.json",
+					"name" : "ParallelTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ParticlePropertiesTest::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-ParticlePropertiesTest-Debug-111b5010744fce6b2b94.json",
+					"name" : "ParticlePropertiesTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ParticleProperties_lib::@99c85c404489b7137797",
+					"jsonFile" : "target-ParticleProperties_lib-Debug-bd9bf03686581c763cdf.json",
+					"name" : "ParticleProperties_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Particle_lib::@51f258b71638d180663f",
+					"jsonFile" : "target-Particle_lib-Debug-e6231c33cde26d62d5fd.json",
+					"name" : "Particle_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "PostProcess::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-PostProcess-Debug-89870bc3e9ec2f75b948.json",
+					"name" : "PostProcess",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "SphereParticleTest::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-SphereParticleTest-Debug-e99ad9507c513452c7d2.json",
+					"name" : "SphereParticleTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "Visualization_lib::@b90041ffefb763ec7663",
+					"jsonFile" : "target-Visualization_lib-Debug-cead3c42cd680339d0a6.json",
+					"name" : "Visualization_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "VisualizeGridBasedContactDetection::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-VisualizeGridBasedContactDetection-Debug-77c9ed7a9bd2c2c97041.json",
+					"name" : "VisualizeGridBasedContactDetection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Debug-211039c0dad73e418bd7.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						9
+					],
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						16
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"jsonFile" : "directory-src-Release-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/ParticleProperties",
+					"jsonFile" : "directory-src.ParticleProperties-Release-c61106b54e1615fa620e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/ParticleProperties",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "src/Particle",
+					"jsonFile" : "directory-src.Particle-Release-595c1b06769a222cf3e1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/Particle",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "src/BoundaryCondition",
+					"jsonFile" : "directory-src.BoundaryCondition-Release-658f417f61513b8c3ffb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/BoundaryCondition",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/Visualization",
+					"jsonFile" : "directory-src.Visualization-Release-3628295bfaadc6a2023c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/Visualization",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "src/ContactDetection",
+					"jsonFile" : "directory-src.ContactDetection-Release-f33d940d67142b52dd27.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/ContactDetection",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/ContactForce",
+					"jsonFile" : "directory-src.ContactForce-Release-cae06f4088948daecbc0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/ContactForce",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/DynamicBoundaryMover",
+					"jsonFile" : "directory-src.DynamicBoundaryMover-Release-b7063a00b4086f02b68a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/DynamicBoundaryMover",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-Release-70e4927a02b591d5c1f8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						4,
+						6,
+						8,
+						9,
+						12,
+						13,
+						15
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					],
+					"name" : "DEMSimulation",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Release-be014a6f1c6d20c3def4.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "BoundaryCondition_lib::@08fd446aa65415c9161c",
+					"jsonFile" : "target-BoundaryCondition_lib-Release-28aa8dd47448128d0840.json",
+					"name" : "BoundaryCondition_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "ContactDetection_lib::@7b2c70fc7da998445a4b",
+					"jsonFile" : "target-ContactDetection_lib-Release-4f745fb74c44ebc78829.json",
+					"name" : "ContactDetection_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "ContactForce_lib::@6f0f18b5a7d070dc06ae",
+					"jsonFile" : "target-ContactForce_lib-Release-1185b1e374b981ebff17.json",
+					"name" : "ContactForce_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "DEM::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-DEM-Release-b4626d3dec7f727b16ed.json",
+					"name" : "DEM",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "DEM_lib::@145eef247bfb46b6828c",
+					"jsonFile" : "target-DEM_lib-Release-e4e9adfb489c4b932b92.json",
+					"name" : "DEM_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "DamainDecomposition::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-DamainDecomposition-Release-b6c43a5362e4c6b51325.json",
+					"name" : "DamainDecomposition",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "DynamicBoundaryMover_lib::@04e1fff3912e333a1207",
+					"jsonFile" : "target-DynamicBoundaryMover_lib-Release-3c5996fd9dfd649744ff.json",
+					"name" : "DynamicBoundaryMover_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ParallelTest::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-ParallelTest-Release-31a23af9da3e01d3e571.json",
+					"name" : "ParallelTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ParticlePropertiesTest::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-ParticlePropertiesTest-Release-4928de3236ce6d367041.json",
+					"name" : "ParticlePropertiesTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ParticleProperties_lib::@99c85c404489b7137797",
+					"jsonFile" : "target-ParticleProperties_lib-Release-e5121b38ec57e31c59ec.json",
+					"name" : "ParticleProperties_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Particle_lib::@51f258b71638d180663f",
+					"jsonFile" : "target-Particle_lib-Release-66519ce06e6603f9b5d1.json",
+					"name" : "Particle_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "PostProcess::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-PostProcess-Release-7bf4b018e0c14ea65ba7.json",
+					"name" : "PostProcess",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "SphereParticleTest::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-SphereParticleTest-Release-ecf418ea58040078ed92.json",
+					"name" : "SphereParticleTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "Visualization_lib::@b90041ffefb763ec7663",
+					"jsonFile" : "target-Visualization_lib-Release-dc01ae54fa550d8dfddb.json",
+					"name" : "Visualization_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "VisualizeGridBasedContactDetection::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-VisualizeGridBasedContactDetection-Release-6ef6787159cc29749134.json",
+					"name" : "VisualizeGridBasedContactDetection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Release-211039c0dad73e418bd7.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						9
+					],
+					"jsonFile" : "directory-.-MinSizeRel-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						16
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"jsonFile" : "directory-src-MinSizeRel-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/ParticleProperties",
+					"jsonFile" : "directory-src.ParticleProperties-MinSizeRel-c61106b54e1615fa620e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/ParticleProperties",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "src/Particle",
+					"jsonFile" : "directory-src.Particle-MinSizeRel-595c1b06769a222cf3e1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/Particle",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "src/BoundaryCondition",
+					"jsonFile" : "directory-src.BoundaryCondition-MinSizeRel-658f417f61513b8c3ffb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/BoundaryCondition",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/Visualization",
+					"jsonFile" : "directory-src.Visualization-MinSizeRel-3628295bfaadc6a2023c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/Visualization",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "src/ContactDetection",
+					"jsonFile" : "directory-src.ContactDetection-MinSizeRel-f33d940d67142b52dd27.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/ContactDetection",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/ContactForce",
+					"jsonFile" : "directory-src.ContactForce-MinSizeRel-cae06f4088948daecbc0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/ContactForce",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/DynamicBoundaryMover",
+					"jsonFile" : "directory-src.DynamicBoundaryMover-MinSizeRel-b7063a00b4086f02b68a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/DynamicBoundaryMover",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-MinSizeRel-70e4927a02b591d5c1f8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						4,
+						6,
+						8,
+						9,
+						12,
+						13,
+						15
+					]
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					],
+					"name" : "DEMSimulation",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-be014a6f1c6d20c3def4.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "BoundaryCondition_lib::@08fd446aa65415c9161c",
+					"jsonFile" : "target-BoundaryCondition_lib-MinSizeRel-bc0700ac115c7a70d3cd.json",
+					"name" : "BoundaryCondition_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "ContactDetection_lib::@7b2c70fc7da998445a4b",
+					"jsonFile" : "target-ContactDetection_lib-MinSizeRel-a3dff95b182b30fe5aba.json",
+					"name" : "ContactDetection_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "ContactForce_lib::@6f0f18b5a7d070dc06ae",
+					"jsonFile" : "target-ContactForce_lib-MinSizeRel-1aa9c2c581fb74e686ce.json",
+					"name" : "ContactForce_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "DEM::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-DEM-MinSizeRel-9a8bee80825d49270f4e.json",
+					"name" : "DEM",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "DEM_lib::@145eef247bfb46b6828c",
+					"jsonFile" : "target-DEM_lib-MinSizeRel-ca12ceae28b807140380.json",
+					"name" : "DEM_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "DamainDecomposition::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-DamainDecomposition-MinSizeRel-71896b79e182c0d733a6.json",
+					"name" : "DamainDecomposition",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "DynamicBoundaryMover_lib::@04e1fff3912e333a1207",
+					"jsonFile" : "target-DynamicBoundaryMover_lib-MinSizeRel-d0158109f4c181727269.json",
+					"name" : "DynamicBoundaryMover_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ParallelTest::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-ParallelTest-MinSizeRel-b18feab17d4b61ff6d05.json",
+					"name" : "ParallelTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ParticlePropertiesTest::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-ParticlePropertiesTest-MinSizeRel-8324babb8e6268307316.json",
+					"name" : "ParticlePropertiesTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ParticleProperties_lib::@99c85c404489b7137797",
+					"jsonFile" : "target-ParticleProperties_lib-MinSizeRel-47240b0273ff6ecb7a75.json",
+					"name" : "ParticleProperties_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Particle_lib::@51f258b71638d180663f",
+					"jsonFile" : "target-Particle_lib-MinSizeRel-b23e7425550e7050c7f9.json",
+					"name" : "Particle_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "PostProcess::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-PostProcess-MinSizeRel-ce3e2c2f338d62570116.json",
+					"name" : "PostProcess",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "SphereParticleTest::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-SphereParticleTest-MinSizeRel-37217d6d04adbcdcc34d.json",
+					"name" : "SphereParticleTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "Visualization_lib::@b90041ffefb763ec7663",
+					"jsonFile" : "target-Visualization_lib-MinSizeRel-dd0f489ffe00d41a10cb.json",
+					"name" : "Visualization_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "VisualizeGridBasedContactDetection::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-VisualizeGridBasedContactDetection-MinSizeRel-a79c69c28d43cc572e27.json",
+					"name" : "VisualizeGridBasedContactDetection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-211039c0dad73e418bd7.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						9
+					],
+					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						16
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"jsonFile" : "directory-src-RelWithDebInfo-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/ParticleProperties",
+					"jsonFile" : "directory-src.ParticleProperties-RelWithDebInfo-c61106b54e1615fa620e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/ParticleProperties",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "src/Particle",
+					"jsonFile" : "directory-src.Particle-RelWithDebInfo-595c1b06769a222cf3e1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/Particle",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "src/BoundaryCondition",
+					"jsonFile" : "directory-src.BoundaryCondition-RelWithDebInfo-658f417f61513b8c3ffb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/BoundaryCondition",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/Visualization",
+					"jsonFile" : "directory-src.Visualization-RelWithDebInfo-3628295bfaadc6a2023c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/Visualization",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "src/ContactDetection",
+					"jsonFile" : "directory-src.ContactDetection-RelWithDebInfo-f33d940d67142b52dd27.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/ContactDetection",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/ContactForce",
+					"jsonFile" : "directory-src.ContactForce-RelWithDebInfo-cae06f4088948daecbc0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/ContactForce",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/DynamicBoundaryMover",
+					"jsonFile" : "directory-src.DynamicBoundaryMover-RelWithDebInfo-b7063a00b4086f02b68a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/DynamicBoundaryMover",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-RelWithDebInfo-70e4927a02b591d5c1f8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						4,
+						6,
+						8,
+						9,
+						12,
+						13,
+						15
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					],
+					"name" : "DEMSimulation",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-be014a6f1c6d20c3def4.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "BoundaryCondition_lib::@08fd446aa65415c9161c",
+					"jsonFile" : "target-BoundaryCondition_lib-RelWithDebInfo-472c4ee3551d412409cd.json",
+					"name" : "BoundaryCondition_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "ContactDetection_lib::@7b2c70fc7da998445a4b",
+					"jsonFile" : "target-ContactDetection_lib-RelWithDebInfo-985861081df67b015bfe.json",
+					"name" : "ContactDetection_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "ContactForce_lib::@6f0f18b5a7d070dc06ae",
+					"jsonFile" : "target-ContactForce_lib-RelWithDebInfo-aae525b4f53f6f7cc6de.json",
+					"name" : "ContactForce_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "DEM::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-DEM-RelWithDebInfo-da9fef4174d47221fc0f.json",
+					"name" : "DEM",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "DEM_lib::@145eef247bfb46b6828c",
+					"jsonFile" : "target-DEM_lib-RelWithDebInfo-2b42df5990fcdce5c638.json",
+					"name" : "DEM_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "DamainDecomposition::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-DamainDecomposition-RelWithDebInfo-a6e38e549cd5b12a20ad.json",
+					"name" : "DamainDecomposition",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "DynamicBoundaryMover_lib::@04e1fff3912e333a1207",
+					"jsonFile" : "target-DynamicBoundaryMover_lib-RelWithDebInfo-1cfcdcb0d7ab5d28671d.json",
+					"name" : "DynamicBoundaryMover_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ParallelTest::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-ParallelTest-RelWithDebInfo-47d9d3eba36d41d39966.json",
+					"name" : "ParallelTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "ParticlePropertiesTest::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-ParticlePropertiesTest-RelWithDebInfo-792ba48d36abf1171b06.json",
+					"name" : "ParticlePropertiesTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ParticleProperties_lib::@99c85c404489b7137797",
+					"jsonFile" : "target-ParticleProperties_lib-RelWithDebInfo-fa2e692cb97c7c97b76b.json",
+					"name" : "ParticleProperties_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Particle_lib::@51f258b71638d180663f",
+					"jsonFile" : "target-Particle_lib-RelWithDebInfo-0002e106bf132b626a54.json",
+					"name" : "Particle_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "PostProcess::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-PostProcess-RelWithDebInfo-baed769025df26136c92.json",
+					"name" : "PostProcess",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "SphereParticleTest::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-SphereParticleTest-RelWithDebInfo-afd19d32b4565d660ca3.json",
+					"name" : "SphereParticleTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "Visualization_lib::@b90041ffefb763ec7663",
+					"jsonFile" : "target-Visualization_lib-RelWithDebInfo-8ef47aaf85061d06206e.json",
+					"name" : "Visualization_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "VisualizeGridBasedContactDetection::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-VisualizeGridBasedContactDetection-RelWithDebInfo-a35045231f1a4f3fe51b.json",
+					"name" : "VisualizeGridBasedContactDetection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-211039c0dad73e418bd7.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "F:/PersonWeb/Project/SphereDEMSimulation/build",
+		"source" : "F:/PersonWeb/Project/SphereDEMSimulation"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

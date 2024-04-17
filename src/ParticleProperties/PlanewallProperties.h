@@ -10,7 +10,7 @@ public:
     virtual std::string save_tostring() const override;
     void setThickness(double thickness );
     double getThickness() const { return thickness; }
-    
+   
 private:
     double thickness;
 };

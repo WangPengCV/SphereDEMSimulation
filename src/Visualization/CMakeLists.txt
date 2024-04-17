@@ -2,6 +2,7 @@
 add_library(Visualization_lib
    Visualization.cpp
    LineSphereSource.cpp
+   LineCylinderSource.cpp
 )
 
 # Link with ParticleProperties_lib to use PropertyTypeID

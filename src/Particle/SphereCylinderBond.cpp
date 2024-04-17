@@ -1,14 +1,17 @@
 #include "SphereCylinderBond.h"
-
+SphereCylinderBond::SphereCylinderBond()
+{
+}
 SphereCylinderBond::SphereCylinderBond(int id, PropertyTypeID type,
                                        const std::shared_ptr<ParticlePropertyManager> &manager,
                                        int fiberid,
                                        int node1, int node2, int neighborelement1, int neighborelement2,
+                                       double energyDissipation,
                                        const Eigen::Vector3d &tangentialforce,
                                        const Eigen::Vector3d &twisttorque,
                                        const Eigen::Vector3d &bendtorque)
     : id(id), type(type), manager(manager), fiberid(fiberid), node1(node1), node2(node2),
-      neighborelement1(neighborelement1), neighborelement2(neighborelement2),
+      neighborelement1(neighborelement1), neighborelement2(neighborelement2), energyDissipation(energyDissipation),
       tangentialforce(tangentialforce), twisttorque(twisttorque), bendtorque(bendtorque)
 {
 }
@@ -41,7 +44,7 @@ const PropertyTypeID &SphereCylinderBond::getType() const
 {
     return type;
 }
-void SphereCylinderBond::updateBond(std::shared_ptr<SphereParticle> &sphere1, std::shared_ptr<SphereParticle> &sphere2, double timeStep)
+void SphereCylinderBond::updateBond(std::unique_ptr<SphereParticle> &sphere1, std::unique_ptr<SphereParticle> &sphere2, double timeStep)
 {
     const auto fiberproperties = manager->getFiberProperties(type);
     const Eigen::Vector3d &position1 = sphere1->getPosition();
@@ -60,7 +63,7 @@ void SphereCylinderBond::updateBond(std::shared_ptr<SphereParticle> &sphere1, st
     Eigen::Vector3d normal_displacement = (length - fiberproperties->getElementlength()) * normal;
 
     Eigen::Vector3d r1 = 0.5 * (position1 + position2) - position1;
-    Eigen::Vector3d r2 = 0.5 * (position1 + position2) - position2;
+    Eigen::Vector3d r2 = -r1;
 
     Eigen::Vector3d contactvelocity1 = velocity1 + omega1.cross(r1);
     Eigen::Vector3d contactvelocity2 = velocity2 + omega2.cross(r2);
@@ -74,9 +77,10 @@ void SphereCylinderBond::updateBond(std::shared_ptr<SphereParticle> &sphere1, st
     Eigen::Vector3d normal_bond_force = fiberproperties->getNormalstiffnesses() * normal_displacement;
     Eigen::Vector3d normal_bond_damping_force = fiberproperties->getBonddampingcoefficient() *
                                                 sqrt(2 * fiberproperties->getNodemass() * fiberproperties->getNormalstiffnesses()) * normal_velocity;
-
+    energyDissipation += std::fabs(normal_bond_damping_force.dot(normal_velocity * timeStep));
     Eigen::Vector3d tangential_bond_damping_force = fiberproperties->getBonddampingcoefficient() *
                                                     sqrt(2 * fiberproperties->getNodemass() * fiberproperties->getShearstiffnesses()) * tangential_velocity;
+    energyDissipation += std::fabs(tangential_bond_damping_force.dot(tangential_velocity * timeStep));
 
     tangentialforce += fiberproperties->getShearstiffnesses() * tangential_velocity * timeStep;
 
@@ -85,7 +89,7 @@ void SphereCylinderBond::updateBond(std::shared_ptr<SphereParticle> &sphere1, st
 
     Eigen::Vector3d resultFoce = normal_bond_force + normal_bond_damping_force + tangentialforce + tangential_bond_damping_force;
 
-    sphere1->addForce(resultFoce);
+    sphere1->addForce(resultFoce); // note the reference is sphere1, and these force is resist the motion
     sphere2->addForce(-resultFoce);
 
     sphere1->addTorque(tangential_torque1);
@@ -98,16 +102,20 @@ void SphereCylinderBond::updateBond(std::shared_ptr<SphereParticle> &sphere1, st
     twisttorque += fiberproperties->getTwiststiffnesses() * relative_twist_velocity * timeStep;
     bendtorque += fiberproperties->getBendingstiffnesses() * relative_bend_velocity * timeStep;
 
-    Eigen::Vector3d twist_bond_damping_torque = fiberproperties->getBonddampingcoefficient() * sqrt(2 * fiberproperties->getNodemomentofinertia() * fiberproperties->getTwiststiffnesses()) * relative_twist_velocity;
+    Eigen::Vector3d twist_bond_damping_torque = fiberproperties->getBonddampingcoefficient() *
+                                                sqrt(2 * fiberproperties->getNodemomentofinertia() * fiberproperties->getTwiststiffnesses()) * relative_twist_velocity;
+    energyDissipation += std::fabs(twist_bond_damping_torque.dot(relative_twist_velocity * timeStep));
+
     Eigen::Vector3d bend_bond_damping_torque = fiberproperties->getBonddampingcoefficient() *
                                                sqrt(2 * fiberproperties->getNodemomentofinertia() * fiberproperties->getBendingstiffnesses()) * relative_bend_velocity;
+    energyDissipation += std::fabs(bend_bond_damping_torque.dot(relative_bend_velocity * timeStep));
     Eigen::Vector3d resultTorqur = twisttorque + bendtorque + twist_bond_damping_torque + bend_bond_damping_torque;
     sphere1->addTorque(resultTorqur);
     sphere2->addTorque(-resultTorqur);
 }
 
 void SphereCylinderBond::computeOverlap(const Eigen::Vector3d &node1position, const Eigen::Vector3d &node2position,
-                                        const Eigen::Vector3d &sphereposition, double& t, Eigen::Vector3d &projection)
+                                        const Eigen::Vector3d &sphereposition, double &t, Eigen::Vector3d &projection)
 {
     Eigen::Vector3d bondVector = node2position - node1position;           // Vector along the bond
     Eigen::Vector3d sphereToNode1Vector = sphereposition - node1position; // Vector from node1 to sphere center
@@ -121,8 +129,8 @@ void SphereCylinderBond::computeOverlap(const Eigen::Vector3d &node1position, co
     // Projection point on the bond segment
     projection = node1position + t * bondVector;
 }
-void SphereCylinderBond::computeOverlap(const Eigen::Vector3d &thisnode1position, const Eigen::Vector3d &thisnode2position, double& s,
-                                        const Eigen::Vector3d &anothernode1position, const Eigen::Vector3d &anothernode2position, double& t)
+void SphereCylinderBond::computeOverlap(const Eigen::Vector3d &thisnode1position, const Eigen::Vector3d &thisnode2position, double &s,
+                                        const Eigen::Vector3d &anothernode1position, const Eigen::Vector3d &anothernode2position, double &t)
 {
     Eigen::Vector3d u = thisnode2position - thisnode1position;
     Eigen::Vector3d v = anothernode2position - anothernode1position;
@@ -134,7 +142,6 @@ void SphereCylinderBond::computeOverlap(const Eigen::Vector3d &thisnode1position
     double d = u.dot(w);
     double e = v.dot(w);
 
-    
     // The derivatives dR/ds(i,j) at the four corners of the domain.
     double f00 = d;
     double f10 = f00 + a;
@@ -211,7 +218,7 @@ void SphereCylinderBond::computeOverlap(const Eigen::Vector3d &thisnode1position
             // dR/ds = 0 on the segment. Compute the minimum of
             // H on [0,1].
             ComputeMinimumParameters(edge, end, b, c, e, g00, g10,
-                                        g01, g11, s, t);
+                                     g01, g11, s, t);
         }
     }
     else
@@ -243,16 +250,15 @@ void SphereCylinderBond::computeOverlap(const Eigen::Vector3d &thisnode1position
             t = zero;
         }
     }
-    //projection1 = (1 - s) * thisnode1position + s * thisnode2position;
-    //projection2 = (1 - t) * anothernode1position + t * anothernode2position;
-    
+    // projection1 = (1 - s) * thisnode1position + s * thisnode2position;
+    // projection2 = (1 - t) * anothernode1position + t * anothernode2position;
 }
 
 void SphereCylinderBond::computeOverlap(const Eigen::Vector3d &node1position, const Eigen::Vector3d &node2position,
-                                        const std::shared_ptr<PlaneWall> &planewall, double &distance)
+                                        const std::unique_ptr<PlaneWall> &planewall, double &distance)
 {
-   
-     // Retrieve the plane wall's point and normal
+
+    // Retrieve the plane wall's point and normal
     Eigen::Vector3d planePoint = planewall->getCorner1();
 
     Eigen::Vector3d planeNormal = planewall->getNormal();
@@ -270,7 +276,6 @@ void SphereCylinderBond::computeOverlap(const Eigen::Vector3d &node1position, co
     Eigen::Vector3d vecToSphereCenter2 = node2position - planePoint;
     double distanceToPlane2 = vecToSphereCenter2.dot(planeNormal);
     distance = distanceToPlane1 > distanceToPlane2 ? distanceToPlane2 : distanceToPlane1;
-
 }
 
 double SphereCylinderBond::GetClampedRoot(double const &slope, double const &h0, double const &h1)
@@ -483,4 +488,39 @@ void SphereCylinderBond::ComputeMinimumParameters(std::array<int32_t, 2> const &
             t = omz * end[0][1] + z * end[1][1];
         }
     }
+}
+double SphereCylinderBond::getPotentialenergy(const std::unique_ptr<SphereParticle> &sphere1, const std::unique_ptr<SphereParticle> &sphere2)
+{
+    double potentialenergy = 0;
+    const auto fiberproperties = manager->getFiberProperties(type);
+    const Eigen::Vector3d &position1 = sphere1->getPosition();
+    const Eigen::Vector3d &position2 = sphere2->getPosition();
+
+    Eigen::Vector3d normal_length = position2 - position1;
+    double length = normal_length.norm();
+    double normal_displacement = (length - fiberproperties->getElementlength());
+
+    potentialenergy += 0.5 * fiberproperties->getNormalstiffnesses() * normal_displacement * normal_displacement;
+
+    potentialenergy += tangentialforce.dot(tangentialforce) / (2* fiberproperties->getShearstiffnesses());
+
+    potentialenergy += bendtorque.dot(bendtorque)  / (2*fiberproperties->getBendingstiffnesses());
+
+    potentialenergy += twisttorque.dot(twisttorque)  / (2*fiberproperties->getTwiststiffnesses());
+
+    return potentialenergy;
+}
+
+std::string SphereCylinderBond::save_tostring() const
+{
+    std::ostringstream ss;
+    ss.precision(std::numeric_limits<double>::digits10 + 1);
+
+    ss << "Fiber, "
+       << "Bond, " << id << ", " << type.getCategory() << ", " << type.getSubType() << ", " << fiberid
+       << ", " << node1 << ", " << node2 << ", " << neighborelement1 << ", " << neighborelement2 << ", " << energyDissipation << ", "
+       << tangentialforce.x() << ", " << tangentialforce.y() << ", " << tangentialforce.z() << ", "
+       << twisttorque.x() << ", " << twisttorque.y() << ", " << twisttorque.z() << ", "
+       << bendtorque.x() << ", " << bendtorque.y() << ", " << bendtorque.z();
+    return ss.str();
 }

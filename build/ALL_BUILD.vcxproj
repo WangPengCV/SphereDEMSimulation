@@ -177,21 +177,25 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{B4A75D19-4649-3FDA-9F57-008D45F56114}</Project>
       <Name>ContactDetection_lib</Name>
     </ProjectReference>
+    <ProjectReference Include="F:\PersonWeb\Project\SphereDEMSimulation\build\tests\DEM.vcxproj">
+      <Project>{61EAF7A9-9F2D-3327-B854-71B095057BE5}</Project>
+      <Name>DEM</Name>
+    </ProjectReference>
     <ProjectReference Include="F:\PersonWeb\Project\SphereDEMSimulation\build\src\DEM_lib.vcxproj">
       <Project>{3C8DFB94-37DD-324F-9182-F012A777A630}</Project>
       <Name>DEM_lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\PersonWeb\Project\SphereDEMSimulation\build\tests\DamainDecomposition.vcxproj">
+      <Project>{54B0474F-44B9-3B3B-A287-CB187C089DBC}</Project>
+      <Name>DamainDecomposition</Name>
     </ProjectReference>
     <ProjectReference Include="F:\PersonWeb\Project\SphereDEMSimulation\build\src\DynamicBoundaryMover\DynamicBoundaryMover_lib.vcxproj">
       <Project>{8298F382-D41A-3D2D-8AFA-F11D0BF7FFF1}</Project>
       <Name>DynamicBoundaryMover_lib</Name>
     </ProjectReference>
-    <ProjectReference Include="F:\PersonWeb\Project\SphereDEMSimulation\build\src\EventTask\EventTask_lib.vcxproj">
-      <Project>{DE12DAE1-86BC-305D-BF8F-9442C740A20B}</Project>
-      <Name>EventTask_lib</Name>
-    </ProjectReference>
-    <ProjectReference Include="F:\PersonWeb\Project\SphereDEMSimulation\build\tests\GranularDamper.vcxproj">
-      <Project>{6AA9A5DD-A44B-3AB3-9A1B-ECFCB22A2C03}</Project>
-      <Name>GranularDamper</Name>
+    <ProjectReference Include="F:\PersonWeb\Project\SphereDEMSimulation\build\tests\ParallelTest.vcxproj">
+      <Project>{F5457BA0-0712-3B67-AFCE-BD62C44D4745}</Project>
+      <Name>ParallelTest</Name>
     </ProjectReference>
     <ProjectReference Include="F:\PersonWeb\Project\SphereDEMSimulation\build\tests\ParticlePropertiesTest.vcxproj">
       <Project>{173D19E1-9293-3690-9848-C1ED263EF7F4}</Project>
@@ -201,13 +205,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{D639F024-0873-3801-9E56-D694CEC578CE}</Project>
       <Name>ParticleProperties_lib</Name>
     </ProjectReference>
-    <ProjectReference Include="F:\PersonWeb\Project\SphereDEMSimulation\build\tests\ParticleSimulationTest.vcxproj">
-      <Project>{6A215ED1-6E42-3A32-9C13-26D8B75E1569}</Project>
-      <Name>ParticleSimulationTest</Name>
-    </ProjectReference>
     <ProjectReference Include="F:\PersonWeb\Project\SphereDEMSimulation\build\src\Particle\Particle_lib.vcxproj">
       <Project>{B01CFCB2-A73F-369A-BE15-3214C2599908}</Project>
       <Name>Particle_lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\PersonWeb\Project\SphereDEMSimulation\build\tests\PostProcess.vcxproj">
+      <Project>{C8EFB436-BAEE-3989-9B51-47556F3F9793}</Project>
+      <Name>PostProcess</Name>
     </ProjectReference>
     <ProjectReference Include="F:\PersonWeb\Project\SphereDEMSimulation\build\tests\SphereParticleTest.vcxproj">
       <Project>{33AF3F5E-1879-34B0-BB29-31792C2C5FFE}</Project>

@@ -14,3 +14,16 @@ const std::vector<int>& Fiber::getSphereCylinderBond() const
 {
     return spherecylinderbond;
 }
+std::string Fiber::save_tostring() const
+{
+    std::ostringstream ss;
+    ss.precision(std::numeric_limits<double>::digits10 + 1);
+
+    ss << "Fiber, "  << id << ", " << type.getCategory() << ", " << type.getSubType() << ", " << startstate << ", " << endstate;
+    for(int i = 0; i < spherecylinderbond.size(); ++i)
+    {
+        ss << ", " << spherecylinderbond[i];
+    }
+    return ss.str();
+}
+
